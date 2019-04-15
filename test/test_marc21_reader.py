@@ -2,11 +2,11 @@ import unittest
 
 from Marc21_reader import marc21_reader
 
-class TestStringMethods(unittest.TestCase):
+class TestMethods(unittest.TestCase):
 
     def test_author(self):
-        marc21 = marc21_reader.get_marc21('sample_data/000055275.marc')
-        records = marc21_reader.get_records(marc21)
+        marc21 = marc21_reader.get_marc21('test/sample_data/000055275.marc')
+        records = marc21_reader.get_record(marc21)
 
         author = marc21_reader.get_author(records)
 
