@@ -42,7 +42,7 @@ def __check_for_gnd(marcField, GNDIndex):
     if marcField['d'] is not None:
         date = marcField['d']
     else:
-        date = ""
+        date = ''
 
     if marcField[GNDIndex] is None:
         GND = 'no_GND'
@@ -50,9 +50,10 @@ def __check_for_gnd(marcField, GNDIndex):
         # get rid of trailing comma
         GND = marcField[GNDIndex].replace(',', '')
 
-    role = ""
     if marcField['4'] is not None:
         role = marcField['4']
+    else:
+        role = ''
 
     return {
         "GND": GND,
