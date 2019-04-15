@@ -12,6 +12,6 @@ class TestStringMethods(unittest.TestCase):
 
         self.assertEqual(len(author), 1)
 
-        self.assertEqual(author[0]['name'], unicode('Bernoulli, Daniel,'))
-        self.assertEqual(author[0]['date'], unicode('1700-1782'))
-        self.assertEqual(author[0]['GND'], unicode('(DE-588)118656503'))
+        self.assertEqual(author[0]['name'], u'Bernoulli, Daniel,')
+        self.assertEqual(author[0]['date'], u'1700-1782')
+        self.assertEqual(author[0]['GND'], u'(DE-588)118656503')
