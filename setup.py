@@ -11,7 +11,7 @@ setuptools.setup(
     description="A package to read Marc files obtained from Aleph, catalogue of the library of the University of Basel",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dhlab-basel/aleph_marc",
+    url="https://github.com/dhlab-basel/alephmarc21reader.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
