@@ -3,7 +3,7 @@ import codecs
 import sys
 
 
-class Marc21Reader:
+class AlephMarc21Reader:
     """
     Represents the record read from a Marc21 file.
     :param pymarc.record.Record record record read from a Marc21 file.
@@ -89,7 +89,7 @@ class Marc21Reader:
         else:
             role = 'no_role'
 
-        return Marc21Reader.Person(marc_field['a'], date, GND, role)
+        return AlephMarc21Reader.Person(marc_field['a'], date, GND, role)
     __get_person_info.__annotations__ = {'marc_field': pymarc.field.Field, 'gnd_index': str, 'return': Person}
 
     def get_author(self):

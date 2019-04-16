@@ -1,1 +1,0 @@
-name = "marc21reader"
