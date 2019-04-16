@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="aleph_marc",
+    name="alephmarc",
     version="0.0.1",
     author="Tobias Schweizer, Digital Humanities Lab, University of Basel",
     author_email="t.schweizer@unibas.ch",

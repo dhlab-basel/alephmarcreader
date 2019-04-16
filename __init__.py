@@ -1,1 +1,1 @@
-name = "aleph_marc"
+name = "alephmarc"

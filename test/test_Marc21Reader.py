@@ -1,6 +1,6 @@
 import unittest
 
-from Marc21_reader import Marc21Reader
+from marc21reader import Marc21Reader
 
 class TestMethods(unittest.TestCase):
 
