@@ -36,19 +36,34 @@ def get_record(marc21):
         exit(2)
 get_record.__annotations__ = {'marc21': bytes, 'return': pymarc.record.Record}
 
-def __check_for_gnd(marcField, GNDIndex):
+class Person:
+    """
+    Represents a  person.
+    :param str name: the nameof the person (family name, first name).
+    :param str lifespan: the lifespan of the person (year of birth and death separated by a '-').
+    :param str gnd: the GND of the person, otherwise 'no_GND'.
+    :param str role: the role of the person (author etc.).
+
+    """
+    def __init__(self, name, lifespan, gnd, role):
+        self.name = name
+        self.lifespan = lifespan
+        self.gnd = gnd
+        self.role = role
+
+def __get_person_info(marcField, GNDIndex):
     """
     Extracts person information from a Marc field incl. the GND, if any.
     Returns a dictionary containing that information with they keys: GND, name, date, role.
     :param pymarc.field.Field marcField: the Marc field that contains information about a person.
     :param str GNDIndex:
-    :return: dict
+    :return: Person
     """
 
     if marcField['d'] is not None:
         date = marcField['d']
     else:
-        date = ''
+        date = 'no_date'
 
     if marcField[GNDIndex] is None:
         GND = 'no_GND'
@@ -59,32 +74,27 @@ def __check_for_gnd(marcField, GNDIndex):
     if marcField['4'] is not None:
         role = marcField['4']
     else:
-        role = ''
+        role = 'no_role'
 
-    return {
-        "GND": GND,
-        "name": marcField['a'],
-        "date": date,
-        "role": role
-    }
-__check_for_gnd.__annotations__ = {'marcField': pymarc.field.Field, 'return': dict}
+    return Person(marcField['a'], date, GND, role)
+__get_person_info.__annotations__ = {'marcField': pymarc.field.Field, 'return': Person}
 
 def get_author(record):
     """
     Returns author information from a Marc record as a dictionary.
     :param pymarc.record.Record record: the Marc record to get the author information from.
-    :return: dict
+    :return: Person
     """
     author = []
     for field in record.get_fields('100'):
-        author.append(__check_for_gnd(field, '0'))
+        author.append(__get_person_info(field, '0'))
 
     # check for 700 that are actually authors
     for field in record.get_fields('700'):
-        person = __check_for_gnd(field, '0')
+        person = __get_person_info(field, '0')
 
-        if person['role'] == "aut":
+        if person.role == "aut":
             author.append(person)
 
     return author
-get_author.__annotations__ = {'record': pymarc.record.Record, 'return': dict}
+get_author.__annotations__ = {'record': pymarc.record.Record, 'return': Person}
