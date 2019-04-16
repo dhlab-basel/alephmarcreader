@@ -5,10 +5,9 @@ from Marc21_reader import marc21_reader
 class TestMethods(unittest.TestCase):
 
     def test_author(self):
-        marc21 = marc21_reader.get_marc21('test/sample_data/000055275.marc')
-        records = marc21_reader.get_record(marc21)
+        record = marc21_reader.get_record_from_file('test/sample_data/000055275.marc')
 
-        author = marc21_reader.get_author(records)
+        author = marc21_reader.get_author(record)
 
         self.assertEqual(len(author), 1)
 

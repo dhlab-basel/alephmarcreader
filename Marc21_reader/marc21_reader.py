@@ -2,7 +2,7 @@ import pymarc
 import codecs
 import sys
 
-def get_marc21(file_path):
+def __get_marc21(file_path):
     """
     Returns the contents of a Marc21 file as binary data.
     :param str file_path: the path to the Marc21 file.
@@ -19,9 +19,9 @@ def get_marc21(file_path):
     except Exception as e:
         sys.stderr.write("Getting Marc21 failed: " + str(e) + " for file_path: " + file_path + "\n")
         exit(1)
-get_marc21.__annotations__ = {'file_path': str, 'return': bytes}
+__get_marc21.__annotations__ = {'file_path': str, 'return': bytes}
 
-def get_record(marc21):
+def __get_record(marc21):
     """
     Parses the given Marc21 data and returns the record.
     :param bytes marc21: Marc21 data.
@@ -31,14 +31,23 @@ def get_record(marc21):
         reader = pymarc.MARCReader(marc21, force_utf8=True, to_unicode=True)
         return next(reader)
     except Exception as e:
-        sys.stderr.write("Error reading Marc21 data: ")
-        sys.stderr.write(str(e))
-        exit(2)
-get_record.__annotations__ = {'marc21': bytes, 'return': pymarc.record.Record}
+        sys.stderr.write("Error reading Marc21 data: " + str(e) + '\n')
+        exit(1)
+__get_record.__annotations__ = {'marc21': bytes, 'return': pymarc.record.Record}
+
+def get_record_from_file(file_path):
+    """
+    Given the path to a Marc21 file, returns the record.
+    :param str file_path: the path to the Marc21 file.
+    :return: pymarc.record.Record
+    """
+    marc21 = __get_marc21(file_path)
+    return __get_record(marc21)
+get_record_from_file.__annotations__ = {'file_path': str, 'return': pymarc.record.Record}
 
 class Person:
     """
-    Represents a  person.
+    Represents a person.
     :param str name: the nameof the person (family name, first name).
     :param str lifespan: the lifespan of the person (year of birth and death separated by a '-').
     :param str gnd: the GND of the person, otherwise 'no_GND'.
@@ -81,7 +90,7 @@ __get_person_info.__annotations__ = {'marcField': pymarc.field.Field, 'return': 
 
 def get_author(record):
     """
-    Returns author information from a Marc record as a dictionary.
+    Returns author information from a Marc21 record.
     :param pymarc.record.Record record: the Marc record to get the author information from.
     :return: Person
     """
