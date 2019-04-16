@@ -2,7 +2,8 @@ import pymarc
 import codecs
 import sys
 
-class Marc21_Reader:
+
+class Marc21Reader:
     """
     Represents the record read from a Marc21 file.
     :param pymarc.record.Record record record read from a Marc21 file.
@@ -50,7 +51,7 @@ class Marc21_Reader:
     class Person:
         """
         Represents a person.
-        :param str name: the nameof the person (family name, first name).
+        :param str name: the name of the person (family name, first name).
         :param str lifespan: the lifespan of the person (year of birth and death separated by a '-').
         :param str gnd: the GND of the person, otherwise 'no_GND'.
         :param str role: the role of the person (author etc.).
@@ -88,7 +89,7 @@ class Marc21_Reader:
         else:
             role = 'no_role'
 
-        return Marc21_Reader.Person(marc_field['a'], date, GND, role)
+        return Marc21Reader.Person(marc_field['a'], date, GND, role)
     __get_person_info.__annotations__ = {'marc_field': pymarc.field.Field, 'gnd_index': str, 'return': Person}
 
     def get_author(self):

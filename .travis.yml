@@ -5,4 +5,4 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-    - python -m unittest test.test_marc21_reader
+    - python -m unittest test.test_Marc21Reader
