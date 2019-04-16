@@ -5,7 +5,7 @@ from alephmarc21reader import AlephMarc21Reader
 class TestMethods(unittest.TestCase):
 
     def test_author(self):
-        marc21_rd = AlephMarc21Reader('test/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('tests/sample_data/000055275.marc')
 
         author = marc21_rd.get_author()
 
