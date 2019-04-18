@@ -13,7 +13,7 @@ class AlephMarc21Reader:
         :param str file_path: the path to the Marc21 file.
         """
         marc21 = self.__get_marc21(file_path)
-        self.record = self.__get_record(marc21)
+        self.__record = self.__get_record(marc21)
 
     def __get_marc21(self, file_path):
         """
@@ -31,7 +31,7 @@ class AlephMarc21Reader:
 
         except Exception as e:
             sys.stderr.write("Getting Marc21 failed: " + str(e) + " for file_path: " + file_path + "\n")
-            exit(1)
+            raise
     __get_marc21.__annotations__ = {'file_path': str, 'return': bytes}
 
     def __get_record(self, marc21):
@@ -45,7 +45,7 @@ class AlephMarc21Reader:
             return next(reader)
         except Exception as e:
             sys.stderr.write("Error reading Marc21 data: " + str(e) + '\n')
-            exit(1)
+            raise
     __get_record.__annotations__ = {'marc21': bytes, 'return': pymarc.record.Record}
 
     class Person:
@@ -103,11 +103,11 @@ class AlephMarc21Reader:
         :return: [Person]
         """
         author = []
-        for field in self.record.get_fields('100'):
+        for field in self.__record.get_fields('100'):
             author.append(self.__get_person_info(field, '0'))
 
         # check for recipients (700) that are actually authors
-        for field in self.record.get_fields('700'):
+        for field in self.__record.get_fields('700'):
             person = self.__get_person_info(field, '0')
 
             if person.role == "aut":
@@ -122,7 +122,7 @@ class AlephMarc21Reader:
         :return: [Person]
         """
         recipient = []
-        for field in self.record.get_fields('700'):
+        for field in self.__record.get_fields('700'):
             person = self.__get_person_info(field, '0')
 
             if person.role == "rcp":
@@ -137,7 +137,7 @@ class AlephMarc21Reader:
         :return: [Person]
         """
         recipient = []
-        for field in self.record.get_fields('600'):
+        for field in self.__record.get_fields('600'):
             recipient.append(self.__get_person_info(field, '0'))
 
         return recipient
@@ -149,7 +149,7 @@ class AlephMarc21Reader:
         :return: [str]
         """
         date = []
-        for field in self.record.get_fields('046'):
+        for field in self.__record.get_fields('046'):
             if 'c' in field:
                 date.append(field['c'])
 
@@ -173,7 +173,7 @@ class AlephMarc21Reader:
         :return: [Place]
         """
         creation_place = []
-        for field in self.record.get_fields('751'):
+        for field in self.__record.get_fields('751'):
             if 'a' in field:
                 name = field['a']
             else:
@@ -205,7 +205,7 @@ class AlephMarc21Reader:
         :return: [Shelfmark]
         """
         shelfmark = []
-        for field in self.record.get_fields('852'):
+        for field in self.__record.get_fields('852'):
             if 'a' in field:
                 institution = field['a']
             else:
@@ -227,7 +227,7 @@ class AlephMarc21Reader:
         :return: [str]
         """
         footnote = []
-        for field in self.record.get_fields('500'):
+        for field in self.__record.get_fields('500'):
             if 'a' in field:
                 footnote.append(field['a'])
 
