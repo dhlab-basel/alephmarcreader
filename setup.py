@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="alephmarc21reader",
     version="0.0.1",
-    author="Tobias Schweizer, Digital Humanities Lab, University of Basel",
+    author="Tobias Schweizer, Digital Humanities Lab, University of Basel; Balduin Landolt, University of Basel",
     author_email="t.schweizer@unibas.ch",
     description="A package to read Marc files obtained from Aleph, catalogue of the library of the University of Basel",
     long_description=long_description,
