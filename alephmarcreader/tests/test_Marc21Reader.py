@@ -1,11 +1,11 @@
 import unittest
 
-from alephmarc21reader import AlephMarc21Reader
+from alephmarcreader import AlephMarc21Reader
 
 class TestMethods(unittest.TestCase):
 
     def test_author(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         author = marc21_rd.get_author()
 
@@ -17,7 +17,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(author[0].role, u'aut')
 
     def test_recipient(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         recipient = marc21_rd.get_recipient()
 
@@ -29,7 +29,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(recipient[0].role, u'rcp')
 
     def test_mentioned_person(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         mentioned = marc21_rd.get_mentioned_person()
 
@@ -41,7 +41,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(mentioned[0].role, False)
 
     def test_date(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         date = marc21_rd.get_date()
 
@@ -50,7 +50,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(date[0], u'1734.03.12')
 
     def test_creation_place(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         cp = marc21_rd.get_creation_place()
 
@@ -60,7 +60,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(cp[0].gnd, u'(DE-588)4004617-5')
 
     def test_get_shelfmark(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         sm = marc21_rd.get_shelfmark()
 
@@ -70,7 +70,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(sm[0].identifier, u'Ms H 340, pp. 569-572')
 
     def test_get_footnote(self):
-        marc21_rd = AlephMarc21Reader('alephmarc21reader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
 
         footnote = marc21_rd.get_footnote()
 
