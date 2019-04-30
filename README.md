@@ -1,4 +1,4 @@
-# alephmarc21reader
+# alephmarcreader
 ## General 
 Python library to read Marc obtained from Aleph, the catalogue of the library of the University of Basel.
 
