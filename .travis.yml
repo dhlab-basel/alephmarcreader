@@ -6,3 +6,5 @@ install:
   - pip install -r requirements.txt
 script:
     - python -m unittest alephmarcreader.tests.test_Marc21Reader
+    - python -m unittest alephmarcreader.tests.test_MarcXMLReader
+    - python -m unittest alephmarcreader.tests.test_XReader

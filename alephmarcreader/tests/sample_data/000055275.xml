@@ -1,0 +1,121 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+  <collection xmlns="http://www.loc.gov/MARC21/slim"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <record xmlns="http://www.loc.gov/MARC21/slim"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+      <leader>00000ntm  22000004u 4500</leader>
+      <controlfield tag="FMT">BK</controlfield>
+      <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+      <controlfield tag="008">040702s1734    xx            00    fre</controlfield>
+      <datafield tag="046" ind1=" " ind2=" ">
+        <subfield code="a">s</subfield>
+        <subfield code="c">1734.03.12</subfield>
+      </datafield>
+      <datafield tag="090" ind1=" " ind2=" ">
+        <subfield code="a">536</subfield>
+        <subfield code="b">LIDOS Bernoulli-Edition</subfield>
+      </datafield>
+      <datafield tag="100" ind1="1" ind2=" ">
+        <subfield code="a">Bernoulli, Daniel</subfield>
+        <subfield code="d">1700-1782</subfield>
+        <subfield code="1">(DE-588)118656503</subfield>
+        <subfield code="e">Autor</subfield>
+        <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="245" ind1="1" ind2="0">
+        <subfield code="a">Brief an [Johannes] Scheuchzer</subfield>
+        <subfield code="c">von Daniel I Bernoulli</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="0">
+        <subfield code="a">Bale</subfield>
+        <subfield code="c">ce 12 mars 1734</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">3 S.</subfield>
+        <subfield code="c">22,5 x 16,5 cm</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+        <subfield code="a">Die Briefhandschrift findet sich in einem Züricher Briefband mit der Aufschrift &quot;Epistolae Helvetorum ad J. J. Scheuchzer&quot;. Johann Jakob Scheuchzer starb jedoch am 23.6.1733. Daniel Bernoulli hatte von dessen Tod spätestens im August 1733 auf der Rückreise von St. Petersburg erfahren (s. Brief von Johann II Bernoulli an Leonhard Euler von 1733.08.21). Der in Zürich lebende Adressat dieses Briefes kann also nicht Johann Jakob Scheuchzer sein. Der Adressat ist daher höchst wahrscheinlich dessen Bruder Johannes Scheuchzer.</subfield>
+      </datafield>
+      <datafield tag="546" ind1=" " ind2=" ">
+        <subfield code="a">Französisch</subfield>
+      </datafield>
+      <datafield tag="542" ind1="1" ind2="1">
+        <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+      </datafield>
+      <datafield tag="655" ind1=" " ind2=" ">
+        <subfield code="a">Autograph</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">Bernoulli, Johann</subfield>
+        <subfield code="d">1667-1748</subfield>
+        <subfield code="1">(DE-588)118509969</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">Boerhaave, Herman</subfield>
+        <subfield code="d">1668-1738</subfield>
+        <subfield code="1">(DE-588)118660829</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">L&apos;Isle, Joseph Nicolas &lt;&lt;de&gt;&gt;</subfield>
+        <subfield code="d">1688-1768</subfield>
+        <subfield code="1">(DE-588)117631655</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">Fahrenheit, Daniel Gabriel</subfield>
+        <subfield code="d">1686-1736</subfield>
+        <subfield code="1">(DE-588)118685783</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">Respinger, Johann Heinrich</subfield>
+        <subfield code="d">1709-1782</subfield>
+        <subfield code="1">(DE-588)12147688X</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="600" ind1="1" ind2="7">
+        <subfield code="a">Réaumur, René Antoine Ferchault &lt;&lt;de&gt;&gt;</subfield>
+        <subfield code="d">1683-1757</subfield>
+        <subfield code="1">(DE-588)118749420</subfield>
+        <subfield code="2">gnd</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+        <subfield code="a">Scheuchzer, Johann</subfield>
+        <subfield code="d">1684-1738</subfield>
+        <subfield code="1">(DE-588)120379260</subfield>
+        <subfield code="e">Adressat</subfield>
+        <subfield code="4">rcp</subfield>
+      </datafield>
+      <datafield tag="751" ind1=" " ind2=" ">
+        <subfield code="a">Basel</subfield>
+        <subfield code="1">(DE-588)4004617-5</subfield>
+      </datafield>
+      <datafield tag="903" ind1=" " ind2=" ">
+        <subfield code="a">Scheuchzer, Johannes (1684-1738)</subfield>
+      </datafield>
+      <datafield tag="906" ind1=" " ind2=" ">
+        <subfield code="a">Briefe = Correspondance</subfield>
+      </datafield>
+      <datafield tag="909" ind1=" " ind2=" ">
+        <subfield code="f">bernoulli</subfield>
+      </datafield>
+      <datafield tag="830" ind1=" " ind2=" ">
+        <subfield code="a">Bernoulli, Daniel I (1700-1782)</subfield>
+      </datafield>
+      <datafield tag="852" ind1=" " ind2=" ">
+        <subfield code="n">CH</subfield>
+        <subfield code="a">ZB Zürich</subfield>
+        <subfield code="p">Ms H 340, pp. 569-572</subfield>
+      </datafield>
+    </record>
+</collection>  

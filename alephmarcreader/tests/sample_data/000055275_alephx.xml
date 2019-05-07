@@ -1,0 +1,362 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<find-doc>
+<record>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00000ntm--22000004u-4500</fixfield>
+<fixfield id="008">040702s1734----xx------------00----fre--</fixfield>
+<varfield id="046" i1=" " i2=" ">
+<subfield label="a">s</subfield>
+<subfield label="c">1734.03.12</subfield>
+</varfield>
+<varfield id="090" i1=" " i2=" ">
+<subfield label="a">536</subfield>
+<subfield label="b">LIDOS Bernoulli-Edition</subfield>
+</varfield>
+<varfield id="100" i1="1" i2=" ">
+<subfield label="a">Bernoulli, Daniel</subfield>
+<subfield label="d">1700-1782</subfield>
+<subfield label="1">(DE-588)118656503</subfield>
+<subfield label="e">Autor</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="1" i2="0">
+<subfield label="a">Brief an [Johannes] Scheuchzer</subfield>
+<subfield label="c">von Daniel I Bernoulli</subfield>
+</varfield>
+<varfield id="264" i1=" " i2="0">
+<subfield label="a">Bale</subfield>
+<subfield label="c">ce 12 mars 1734</subfield>
+</varfield>
+<varfield id="300" i1=" " i2=" ">
+<subfield label="a">3 S.</subfield>
+<subfield label="c">22,5 x 16,5 cm</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+</varfield>
+<varfield id="500" i1=" " i2=" ">
+<subfield label="a">Die Briefhandschrift findet sich in einem Züricher Briefband mit der Aufschrift &quot;Epistolae Helvetorum ad J. J. Scheuchzer&quot;. Johann Jakob Scheuchzer starb jedoch am 23.6.1733. Daniel Bernoulli hatte von dessen Tod spätestens im August 1733 auf der Rückreise von St. Petersburg erfahren (s. Brief von Johann II Bernoulli an Leonhard Euler von 1733.08.21). Der in Zürich lebende Adressat dieses Briefes kann also nicht Johann Jakob Scheuchzer sein. Der Adressat ist daher höchst wahrscheinlich dessen Bruder Johannes Scheuchzer.</subfield>
+</varfield>
+<varfield id="546" i1=" " i2=" ">
+<subfield label="a">Französisch</subfield>
+</varfield>
+<varfield id="542" i1="1" i2="1">
+<subfield label="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+</varfield>
+<varfield id="655" i1=" " i2=" ">
+<subfield label="a">Autograph</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Bernoulli, Johann</subfield>
+<subfield label="d">1667-1748</subfield>
+<subfield label="1">(DE-588)118509969</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Boerhaave, Herman</subfield>
+<subfield label="d">1668-1738</subfield>
+<subfield label="1">(DE-588)118660829</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">L&apos;Isle, Joseph Nicolas &lt;&lt;de&gt;&gt;</subfield>
+<subfield label="d">1688-1768</subfield>
+<subfield label="1">(DE-588)117631655</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Fahrenheit, Daniel Gabriel</subfield>
+<subfield label="d">1686-1736</subfield>
+<subfield label="1">(DE-588)118685783</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Respinger, Johann Heinrich</subfield>
+<subfield label="d">1709-1782</subfield>
+<subfield label="1">(DE-588)12147688X</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Réaumur, René Antoine Ferchault &lt;&lt;de&gt;&gt;</subfield>
+<subfield label="d">1683-1757</subfield>
+<subfield label="1">(DE-588)118749420</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="700" i1="1" i2=" ">
+<subfield label="a">Scheuchzer, Johann</subfield>
+<subfield label="d">1684-1738</subfield>
+<subfield label="1">(DE-588)120379260</subfield>
+<subfield label="e">Adressat</subfield>
+<subfield label="4">rcp</subfield>
+</varfield>
+<varfield id="751" i1=" " i2=" ">
+<subfield label="a">Basel</subfield>
+<subfield label="1">(DE-588)4004617-5</subfield>
+</varfield>
+<varfield id="903" i1=" " i2=" ">
+<subfield label="a">Scheuchzer, Johannes (1684-1738)</subfield>
+</varfield>
+<varfield id="906" i1=" " i2=" ">
+<subfield label="a">Briefe = Correspondance</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">bernoulli</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">LIDOS</subfield>
+<subfield label="b">20</subfield>
+<subfield label="c">20041020</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1857</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="c">20090717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1742</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20100511</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1210</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20100518</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1114</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20100909</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1731</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1044</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-batch</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1541</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20101216</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0926</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-manage</subfield>
+<subfield label="c">20110504</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0952</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20110509</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1503</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20120106</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1448</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">US</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20120119</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1434</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20120604</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1537</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20140604</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1445</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0944</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0949</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0953</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141121</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1602</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141127</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1225</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141203</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1018</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141209</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1125</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141209</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1126</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141209</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1127</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150723</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1136</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150817</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0953</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1444</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1747</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20160326</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0732</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160405</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1116</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1731</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BOT2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20160822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1041</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170324</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1631</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20171109</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1136</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20171202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1609</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20171213</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0947</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">manage-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20180717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">2030</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BMT</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20180718</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1207</subfield>
+</varfield>
+<varfield id="830" i1=" " i2=" ">
+<subfield label="a">Bernoulli, Daniel I (1700-1782)</subfield>
+</varfield>
+<varfield id="852" i1=" " i2=" ">
+<subfield label="n">CH</subfield>
+<subfield label="a">ZB Zürich</subfield>
+<subfield label="p">Ms H 340, pp. 569-572</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>Q3JXSK5K8JMIKPP35C86UGTLLCKH5LQSPYQBQR98C1SN7DV6CQ</session-id>
+</find-doc>
