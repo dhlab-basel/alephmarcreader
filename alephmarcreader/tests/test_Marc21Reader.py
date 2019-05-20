@@ -72,7 +72,7 @@ class TestMethods(unittest.TestCase):
     def test_get_footnote(self):
         marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
-        footnote = marc21_rd.get_footnote()
+        footnote = marc21_rd.get_general_remarks()
 
         self.assertEqual(len(footnote), 1)
 
@@ -89,4 +89,79 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(recipient[0].lifespan, u'1678-1733')
         self.assertEqual(recipient[0].gnd, u'(DE-588)119112450')
         self.assertEqual(recipient[0].roles, [u'scr', u'rcp'])
+
+    def test_get_external_link(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000307927.marc')
+
+        external_links = marc21_rd.get_emanuscripta_doi()
+
+        self.assertEqual(len(external_links), 1)
+
+        self.assertEqual(external_links[0], u'10.7891/e-manuscripta-39903')
+
+    def test_get_pyhsical_description(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000059552.marc')
+
+        physical_desc = marc21_rd.get_physical_description()
+
+        self.assertEqual(len(physical_desc), 1)
+
+        self.assertEqual(physical_desc[0].extent, u'3 S. :')
+        self.assertEqual(physical_desc[0].attribute, u'Fotokopie ;')
+        self.assertEqual(physical_desc[0].dimension, u'22 x 16,5 cm +')
+        self.assertEqual(physical_desc[0].supplement, u'1 Beil.')
+
+    def test_get_content_summary(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000059552.marc')
+
+        content = marc21_rd.get_content_summary()
+
+        self.assertEqual(len(content), 1)
+
+        self.assertEqual(content[0], u'Nic. II B. antwortet versp\xe4tet auf einen Brief de Brui\xe8res, da er dessen Adresse erst von dessen Advokaten, M. Polin, erfragen musste. Er hat Brui\xe8re "au Faucon" besucht, ihn aber nicht angetroffen. Brui\xe8re hat ihn in seinem Brief um Aukl\xe4rung in einer bestimmten Sache gebeten. Von Polin hat Nic. II B. erfahren, dass es sich um das Dividieren handelt. Polin hat ihm aber dies bereits selbst erl\xe4utert.')
+
+    def test_get_content_summary(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000054774.marc')
+
+        lang = marc21_rd.get_language()
+
+        self.assertEqual(len(lang), 2)
+
+        self.assertEqual(lang[0], u'fre')
+        self.assertEqual(lang[1], u'lat')
+
+    def test_get_mentioned_organisation(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000307927.marc')
+
+        mentioned_organisation = marc21_rd.get_mentioned_organisation()
+
+        self.assertEqual(len(mentioned_organisation), 2)
+
+        self.assertEqual(mentioned_organisation[0].name, u'Eck, van & c.')
+        self.assertEqual(mentioned_organisation[0].gnd, False)
+        self.assertEqual(mentioned_organisation[0].place, u'London')
+
+        self.assertEqual(mentioned_organisation[1].name, u'Lefort Beaumont')
+        self.assertEqual(mentioned_organisation[1].gnd, u'(DE-588)1086218213')
+        self.assertEqual(mentioned_organisation[1].place, u'Gen\xe8ve')
+
+    def test_get_recipient_organisation(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000056870.marc')
+
+        mentioned_organisation = marc21_rd.get_recipient_organisation()
+
+        self.assertEqual(len(mentioned_organisation), 2)
+
+        self.assertEqual(mentioned_organisation[0].name, u'Universit\xe4t Basel.')
+        self.assertEqual(mentioned_organisation[0].gnd, u'(DE-588)1085854191')
+        self.assertEqual(mentioned_organisation[0].roles, [u'rcp'])
+        self.assertEqual(mentioned_organisation[0].division, u'Regenz')
+
+        self.assertEqual(mentioned_organisation[1].name, u'Universit\xe4t Basel.')
+        self.assertEqual(mentioned_organisation[1].gnd, u'(DE-588)1087006392')
+        self.assertEqual(mentioned_organisation[1].roles, [u'rcp'])
+        self.assertEqual(mentioned_organisation[1].division, u'Rektorat')
+
+
+
 

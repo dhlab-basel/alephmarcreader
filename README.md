@@ -9,7 +9,7 @@ The docstrings can be displayed with pydoc (from the project root): `pydoc aleph
 `. For the inner classes such as `Person`, run `pydoc alephmarcreader.abstractalephmarcreader.AbstractAlephMarcReader.Person`.
 
 ## Design
-`alephmarcreader.abstractalephmarcreader.AbstractAlephMarcReader` provides methods to acess Marc data.
+`alephmarcreader.abstractalephmarcreader.AbstractAlephMarcReader` provides methods to access Marc data.
 It is an abstract class that has two abstract methods `__get_field` and `__get_subfield_text` that have to be implemented in the subclass for the file format at hand.
 
 ## Unit Tests
