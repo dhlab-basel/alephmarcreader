@@ -5,7 +5,7 @@ from alephmarcreader import AlephMarc21Reader
 class TestMethods(unittest.TestCase):
 
     def test_author(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         author = marc21_rd.get_author()
 
@@ -14,10 +14,10 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(author[0].name, u'Bernoulli, Daniel,')
         self.assertEqual(author[0].lifespan, u'1700-1782')
         self.assertEqual(author[0].gnd, u'(DE-588)118656503')
-        self.assertEqual(author[0].role, u'aut')
+        self.assertEqual(author[0].roles, [u'aut'])
 
     def test_recipient(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         recipient = marc21_rd.get_recipient()
 
@@ -26,10 +26,10 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(recipient[0].name, u'Scheuchzer, Johann,')
         self.assertEqual(recipient[0].lifespan, u'1684-1738')
         self.assertEqual(recipient[0].gnd, u'(DE-588)120379260')
-        self.assertEqual(recipient[0].role, u'rcp')
+        self.assertEqual(recipient[0].roles, [u'rcp'])
 
     def test_mentioned_person(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         mentioned = marc21_rd.get_mentioned_person()
 
@@ -38,10 +38,10 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(mentioned[0].name, u'Bernoulli, Johann')
         self.assertEqual(mentioned[0].lifespan, u'1667-1748')
         self.assertEqual(mentioned[0].gnd, u'(DE-588)118509969')
-        self.assertEqual(mentioned[0].role, False)
+        self.assertEqual(mentioned[0].roles, [])
 
     def test_date(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         date = marc21_rd.get_date()
 
@@ -50,7 +50,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(date[0], u'1734.03.12')
 
     def test_creation_place(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         cp = marc21_rd.get_creation_place()
 
@@ -60,7 +60,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(cp[0].gnd, u'(DE-588)4004617-5')
 
     def test_get_shelfmark(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         sm = marc21_rd.get_shelfmark()
 
@@ -70,7 +70,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(sm[0].identifier, u'Ms H 340, pp. 569-572')
 
     def test_get_footnote(self):
-        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/000055275.marc')
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 
         footnote = marc21_rd.get_footnote()
 
@@ -78,5 +78,15 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(footnote[0], u'Die Briefhandschrift findet sich in einem Z\xfcricher Briefband mit der Aufschrift "Epistolae Helvetorum ad J. J. Scheuchzer". Johann Jakob Scheuchzer starb jedoch am 23.6.1733. Daniel Bernoulli hatte von dessen Tod sp\xe4testens im August 1733 auf der R\xfcckreise von St. Petersburg erfahren (s. Brief von Johann II Bernoulli an Leonhard Euler von 1733.08.21). Der in Z\xfcrich lebende Adressat dieses Briefes kann also nicht Johann Jakob Scheuchzer sein. Der Adressat ist daher h\xf6chst wahrscheinlich dessen Bruder Johannes Scheuchzer.')
 
+    def test_recipient_with_multiple_roles(self):
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000059794.marc')
 
+        recipient = marc21_rd.get_recipient()
+
+        self.assertEqual(len(recipient), 1)
+
+        self.assertEqual(recipient[0].name, u'Hermann, Jacob,')
+        self.assertEqual(recipient[0].lifespan, u'1678-1733')
+        self.assertEqual(recipient[0].gnd, u'(DE-588)119112450')
+        self.assertEqual(recipient[0].roles, [u'scr', u'rcp'])
 

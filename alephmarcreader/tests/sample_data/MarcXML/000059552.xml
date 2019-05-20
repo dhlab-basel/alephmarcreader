@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+ 
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <leader>00000ntm  22000004u 4500</leader>
+  <controlfield tag="FMT">BK</controlfield>
+  <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+  <controlfield tag="008">040702s1724    sz            00    fre</controlfield>
+  <datafield tag="046" ind1=" " ind2=" ">
+    <subfield code="a">s</subfield>
+    <subfield code="c">1724.03.05</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Bernoulli, Nicolas</subfield>
+    <subfield code="d">1695-1726</subfield>
+    <subfield code="1">(DE-588)117589144</subfield>
+    <subfield code="e">Autor</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Brief an de Bruière</subfield>
+    <subfield code="c">von Nicolaus II Bernoulli</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">Kopie</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="0">
+    <subfield code="a">Berne</subfield>
+    <subfield code="c">ce 5.r Mars 1724</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">3 S.</subfield>
+    <subfield code="b">Fotokopie</subfield>
+    <subfield code="c">22 x 16,5 cm</subfield>
+    <subfield code="e">1 Beil.</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="c">Dokument=Item=Pièce</subfield>
+  </datafield>
+  <datafield tag="583" ind1="0" ind2=" ">
+    <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+  </datafield>
+  <datafield tag="525" ind1=" " ind2=" ">
+    <subfield code="a">Beigelegt ist das Couvert mit Adresse und Siegel.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Nic. II B. antwortet verspätet auf einen Brief de Bruières, da er dessen Adresse erst von dessen Advokaten, M. Polin, erfragen musste. Er hat Bruière "au Faucon" besucht, ihn aber nicht angetroffen. Bruière hat ihn in seinem Brief um Auklärung in einer bestimmten Sache gebeten. Von Polin hat Nic. II B. erfahren, dass es sich um das Dividieren handelt. Polin hat ihm aber dies bereits selbst erläutert.</subfield>
+  </datafield>
+  <datafield tag="534" ind1=" " ind2=" ">
+    <subfield code="n">Im April 1954 angeboten in Paris durch C. F. Roux-Devillas; 2004 in Bern Burgerbibliothek Mss.h.h.XIV, 151 (Vorlage für Katalogaufnahme)</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Französisch</subfield>
+  </datafield>
+  <datafield tag="542" ind1="1" ind2="1">
+    <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+  </datafield>
+  <datafield tag="600" ind1="0" ind2="7">
+    <subfield code="a">Polin</subfield>
+    <subfield code="c">Advokat von de Bruière</subfield>
+    <subfield code="2">resource</subfield>
+  </datafield>
+  <datafield tag="700" ind1="0" ind2=" ">
+    <subfield code="a">Bruière, &lt;&lt;de&gt;&gt;</subfield>
+    <subfield code="e">Adressat</subfield>
+    <subfield code="4">rcp</subfield>
+  </datafield>
+  <datafield tag="751" ind1=" " ind2=" ">
+    <subfield code="a">Bern</subfield>
+    <subfield code="1">(DE-588)4005762-8</subfield>
+  </datafield>
+  <datafield tag="773" ind1="1" ind2="A">
+    <subfield code="g">Nr.21</subfield>
+    <subfield code="j">21</subfield>
+    <subfield code="t">Bernoulli-Briefe</subfield>
+    <subfield code="w">000205093</subfield>
+  </datafield>
+  <datafield tag="903" ind1=" " ind2=" ">
+    <subfield code="a">de Bruière</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">Briefe = Correspondance</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">bernoulli</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">collect_this sammlung</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli, Nicolaus II (1695-1726)</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="n">CH</subfield>
+    <subfield code="a">Basel UB</subfield>
+    <subfield code="b">Handschriften</subfield>
+    <subfield code="p">L Ia 53:Nr.21</subfield>
+  </datafield>
+</record>
+
+</collection>

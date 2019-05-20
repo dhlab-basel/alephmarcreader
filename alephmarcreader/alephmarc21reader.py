@@ -50,19 +50,17 @@ class AlephMarc21Reader(AbstractAlephMarcReader):
             raise
     __get_record.__annotations__ = {'marc21': bytes, 'return': pymarc.record.Record}
 
-    def _AbstractAlephMarcReader__get_subfield_text(self, marc_field, index):
+    def _AbstractAlephMarcReader__get_subfield_texts(self, marc_field, index):
         """
         Given a marc field, get the indicated subfield's text or False if it does not exist.
         :param marc_field: marc field.
         :param index: index of the subfield.
-        :return: str|False.
+        :return: [str].
         """
 
-        if index in marc_field:
-            return marc_field[index]
-        else:
-            return False
-    _AbstractAlephMarcReader__get_subfield_text.__annotations__ = {'index': str, 'marc_field': pymarc.field.Field, 'return': str}
+        return marc_field.get_subfields(index)
+
+    _AbstractAlephMarcReader__get_subfield_texts.__annotations__ = {'index': str, 'marc_field': pymarc.field.Field, 'return': [str]}
 
     def _AbstractAlephMarcReader__get_field(self, index):
         """

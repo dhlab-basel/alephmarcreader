@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <leader>00000ntm  22000004u 4500</leader>
+  <controlfield tag="FMT">BK</controlfield>
+  <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+  <controlfield tag="008">040702s1763    xx            00    fre</controlfield>
+  <datafield tag="024" ind1="7" ind2=" ">
+    <subfield code="a">10.7891/e-manuscripta-39903</subfield>
+    <subfield code="2">doi</subfield>
+  </datafield>
+  <datafield tag="046" ind1=" " ind2=" ">
+    <subfield code="a">s</subfield>
+    <subfield code="c">1763.03.26</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Bernoulli, Johann</subfield>
+    <subfield code="d">1710-1790</subfield>
+    <subfield code="1">(DE-588)117589136</subfield>
+    <subfield code="e">Autor</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Brief an Jean Jallabert</subfield>
+    <subfield code="c">von Johann II Bernoulli</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="0">
+    <subfield code="a">[S.l.]</subfield>
+    <subfield code="c">ce 26. Mars 1763</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">3 S.</subfield>
+    <subfield code="c">verschiedene Formate</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="c">Dokument=Item=Pièce</subfield>
+  </datafield>
+  <datafield tag="583" ind1="0" ind2=" ">
+    <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Siegel</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="n">Eine Fotokopie (negativ) findet sich unter Signatur L Ia 53:Nr.11</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Französisch</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="b">Digitalisierung=Digitization=Numérisation</subfield>
+    <subfield code="i">TIFF</subfield>
+    <subfield code="c">06.12.2015</subfield>
+  </datafield>
+  <datafield tag="542" ind1="1" ind2="1">
+    <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2=" ">
+    <subfield code="a">Autograph</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Bernoulli, Emanuel</subfield>
+    <subfield code="d">1749-1817</subfield>
+    <subfield code="1">(DE-588)1089910533</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Bernoulli, Susanna</subfield>
+    <subfield code="d">1715-1803</subfield>
+    <subfield code="1">(DE-588)1089911661</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="0" ind2="7">
+    <subfield code="a">Deuchert</subfield>
+    <subfield code="2">resource</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="7">
+    <subfield code="a">Eck, van &amp; c.</subfield>
+    <subfield code="g">London</subfield>
+    <subfield code="2">resource</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="7">
+    <subfield code="a">Lefort Beaumont</subfield>
+    <subfield code="g">Genève</subfield>
+    <subfield code="1">(DE-588)1086218213</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Jallabert, Jean</subfield>
+    <subfield code="d">1712-1768</subfield>
+    <subfield code="1">(DE-588)100289665</subfield>
+    <subfield code="e">Adressat</subfield>
+    <subfield code="4">rcp</subfield>
+  </datafield>
+  <datafield tag="773" ind1="1" ind2="A">
+    <subfield code="g">Nr.4</subfield>
+    <subfield code="j">4</subfield>
+    <subfield code="t">Bernoulliana: Älterer Bestand und einzelne Neuerwerbungen. 54, 7 Briefe an Jean Jallabert</subfield>
+    <subfield code="w">000204111</subfield>
+  </datafield>
+  <datafield tag="903" ind1=" " ind2=" ">
+    <subfield code="a">Jallabert, Jean (1712-1768)</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">Briefe = Correspondance</subfield>
+  </datafield>
+  <datafield tag="907" ind1=" " ind2=" ">
+    <subfield code="g">CF Elektron. Daten Fernzugriff=Fichier online</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">bernoulli</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">emanuscriptabsub</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">collect_this sammlung</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli, Johann II (1710-1790)</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="n">CH</subfield>
+    <subfield code="a">Basel UB</subfield>
+    <subfield code="b">Handschriften</subfield>
+    <subfield code="p">L Ia 54:Nr.4</subfield>
+    <subfield code="q">Benutzung eingeschränkt</subfield>
+  </datafield>
+  <datafield tag="856" ind1=" " ind2="1">
+    <subfield code="u">http://dx.doi.org/10.7891/e-manuscripta-39903</subfield>
+    <subfield code="z">Digitalisat in e-manuscripta</subfield>
+  </datafield>
+</record>
+
+</collection>

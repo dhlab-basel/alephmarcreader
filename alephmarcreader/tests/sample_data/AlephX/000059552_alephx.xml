@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<find-doc>
+<record>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00000ntm--22000004u-4500</fixfield>
+<fixfield id="008">040702s1724----sz------------00----fre--</fixfield>
+<varfield id="046" i1=" " i2=" ">
+<subfield label="a">s</subfield>
+<subfield label="c">1724.03.05</subfield>
+</varfield>
+<varfield id="100" i1="1" i2=" ">
+<subfield label="a">Bernoulli, Nicolas</subfield>
+<subfield label="d">1695-1726</subfield>
+<subfield label="1">(DE-588)117589144</subfield>
+<subfield label="e">Autor</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="1" i2="0">
+<subfield label="a">Brief an de Bruière</subfield>
+<subfield label="c">von Nicolaus II Bernoulli</subfield>
+</varfield>
+<varfield id="250" i1=" " i2=" ">
+<subfield label="a">Kopie</subfield>
+</varfield>
+<varfield id="264" i1=" " i2="0">
+<subfield label="a">Berne</subfield>
+<subfield label="c">ce 5.r Mars 1724</subfield>
+</varfield>
+<varfield id="300" i1=" " i2=" ">
+<subfield label="a">3 S.</subfield>
+<subfield label="b">Fotokopie</subfield>
+<subfield label="c">22 x 16,5 cm</subfield>
+<subfield label="e">1 Beil.</subfield>
+</varfield>
+<varfield id="351" i1=" " i2=" ">
+<subfield label="c">Dokument=Item=Pièce</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+</varfield>
+<varfield id="525" i1=" " i2=" ">
+<subfield label="a">Beigelegt ist das Couvert mit Adresse und Siegel.</subfield>
+</varfield>
+<varfield id="520" i1=" " i2=" ">
+<subfield label="a">Nic. II B. antwortet verspätet auf einen Brief de Bruières, da er dessen Adresse erst von dessen Advokaten, M. Polin, erfragen musste. Er hat Bruière "au Faucon" besucht, ihn aber nicht angetroffen. Bruière hat ihn in seinem Brief um Auklärung in einer bestimmten Sache gebeten. Von Polin hat Nic. II B. erfahren, dass es sich um das Dividieren handelt. Polin hat ihm aber dies bereits selbst erläutert.</subfield>
+</varfield>
+<varfield id="534" i1=" " i2=" ">
+<subfield label="n">Im April 1954 angeboten in Paris durch C. F. Roux-Devillas; 2004 in Bern Burgerbibliothek Mss.h.h.XIV, 151 (Vorlage für Katalogaufnahme)</subfield>
+</varfield>
+<varfield id="546" i1=" " i2=" ">
+<subfield label="a">Französisch</subfield>
+</varfield>
+<varfield id="542" i1="1" i2="1">
+<subfield label="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+</varfield>
+<varfield id="600" i1="0" i2="7">
+<subfield label="a">Polin</subfield>
+<subfield label="c">Advokat von de Bruière</subfield>
+<subfield label="2">resource</subfield>
+</varfield>
+<varfield id="700" i1="0" i2=" ">
+<subfield label="a">Bruière, &lt;&lt;de&gt;&gt;</subfield>
+<subfield label="e">Adressat</subfield>
+<subfield label="4">rcp</subfield>
+</varfield>
+<varfield id="751" i1=" " i2=" ">
+<subfield label="a">Bern</subfield>
+<subfield label="1">(DE-588)4005762-8</subfield>
+</varfield>
+<varfield id="773" i1="1" i2="A">
+<subfield label="g">Nr.21</subfield>
+<subfield label="j">21</subfield>
+<subfield label="t">Bernoulli-Briefe</subfield>
+<subfield label="w">000205093</subfield>
+</varfield>
+<varfield id="903" i1=" " i2=" ">
+<subfield label="a">de Bruière</subfield>
+</varfield>
+<varfield id="906" i1=" " i2=" ">
+<subfield label="a">Briefe = Correspondance</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">bernoulli</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">collect_this sammlung</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">LIDOS</subfield>
+<subfield label="b">20</subfield>
+<subfield label="c">20041020</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1859</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="c">20090717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1742</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20100518</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1210</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20100909</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1732</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1050</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-batch</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1544</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20101216</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0926</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-manage</subfield>
+<subfield label="c">20110504</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0956</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20110509</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1504</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">GES</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20120119</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1558</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20120604</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1537</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">US</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20131111</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1430</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BMA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20140304</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0908</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-batch</subfield>
+<subfield label="c">20140522</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1125</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140526</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1334</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BMA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20140724</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0940</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0945</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0954</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BMA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20141209</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1351</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1445</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1813</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20160326</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0826</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160405</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1123</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1639</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1732</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BMA2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20170202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1122</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170324</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1633</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1610</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171213</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0949</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20180330</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1006</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">manage-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20180717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">2030</subfield>
+</varfield>
+<varfield id="830" i1=" " i2=" ">
+<subfield label="a">Bernoulli, Nicolaus II (1695-1726)</subfield>
+</varfield>
+<varfield id="852" i1=" " i2=" ">
+<subfield label="n">CH</subfield>
+<subfield label="a">Basel UB</subfield>
+<subfield label="b">Handschriften</subfield>
+<subfield label="p">L Ia 53:Nr.21</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>Q847YXH745GSA99DVJR8FL4JAAFY78JQ22RDK2GM4FIX9MKD4D</session-id>
+</find-doc>

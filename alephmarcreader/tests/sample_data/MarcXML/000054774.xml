@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <leader>00000ntm  22000004u 4500</leader>
+  <controlfield tag="FMT">BK</controlfield>
+  <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+  <controlfield tag="008">040702s1724    sz            00    fre</controlfield>
+  <datafield tag="041" ind1=" " ind2=" ">
+    <subfield code="a">fre</subfield>
+    <subfield code="a">lat</subfield>
+  </datafield>
+  <datafield tag="046" ind1=" " ind2=" ">
+    <subfield code="a">s</subfield>
+    <subfield code="c">1724.11.21</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">33</subfield>
+    <subfield code="b">LIDOS Bernoulli-Edition</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Bernoulli, Nicolaus</subfield>
+    <subfield code="d">1687-1759</subfield>
+    <subfield code="1">(DE-588)119166895</subfield>
+    <subfield code="e">Autor</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Brief an [Daniel I Bernoulli]</subfield>
+    <subfield code="c">von N[iklaus I] Bernoulli</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">Abschrift (Autograph. Kopie)</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="0">
+    <subfield code="a">A Bâle</subfield>
+    <subfield code="c">ce 21. 9bre 1724</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">2 Bl.</subfield>
+    <subfield code="c">22,5 x 17 cm</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="c">Dokument=Item=Pièce</subfield>
+  </datafield>
+  <datafield tag="583" ind1="0" ind2=" ">
+    <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+  </datafield>
+  <datafield tag="506" ind1=" " ind2=" ">
+    <subfield code="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal. Dieser Band ist stark beschädigt und für die Benutzung bis auf weiteres gesperrt.</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Entwurf: Basel UB, Handschriften: L Ia 21:1:Bl.14a-c (unvollständig)</subfield>
+  </datafield>
+  <datafield tag="541" ind1=" " ind2=" ">
+    <subfield code="f">Öffentliche Bibliothek der Universität Basel</subfield>
+  </datafield>
+  <datafield tag="544" ind1="1" ind2=" ">
+    <subfield code="n">Siehe auch Signatur L Ia 48:Bl.28</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Französisch</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Lateinisch</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="b">Verzeichnung=Description=Inventaire</subfield>
+    <subfield code="c">Juli 2015</subfield>
+    <subfield code="f">HAN-Katalogisierungsregeln</subfield>
+    <subfield code="i">Vollständige Rekatalogisierung nach Standortverzeichnis, Briefkatalog und Originalbrief</subfield>
+  </datafield>
+  <datafield tag="583" ind1="0" ind2=" ">
+    <subfield code="b">Konservierung=Preservation=Conservation</subfield>
+    <subfield code="c">09.2011</subfield>
+    <subfield code="i">Der Band ist mit EGT4 klassifiziert und für jegliche Benutzung gesperrt. Tintenfrass und Materialverlust.</subfield>
+  </datafield>
+  <datafield tag="542" ind1="1" ind2="1">
+    <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2=" ">
+    <subfield code="a">Autograph</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Bernoulli, Johann</subfield>
+    <subfield code="d">1667-1748</subfield>
+    <subfield code="1">(DE-588)118509969</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Cassini, Giovanni Domenico</subfield>
+    <subfield code="d">1625-1712</subfield>
+    <subfield code="1">(DE-588)119408007</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Duhamel du Monceau, Henri Louis</subfield>
+    <subfield code="d">1700-1782</subfield>
+    <subfield code="1">(DE-588)119501813</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Fagnano, Giulio Carlo &lt;&lt;di&gt;&gt;</subfield>
+    <subfield code="d">1682-1766</subfield>
+    <subfield code="1">(DE-588)1089274971</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Goldbach, Christian</subfield>
+    <subfield code="d">1690-1764</subfield>
+    <subfield code="1">(DE-588)118696149</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Moivre, Abraham &lt;&lt;de&gt;&gt;</subfield>
+    <subfield code="d">1667-1754</subfield>
+    <subfield code="1">(DE-588)117586765</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Montmort, Pierre Rémond &lt;&lt;de&gt;&gt;</subfield>
+    <subfield code="d">1678-1719</subfield>
+    <subfield code="1">(DE-588)117601020</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Riccati, Jacopo</subfield>
+    <subfield code="d">1676-1754</subfield>
+    <subfield code="1">(DE-588)119543885</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Rizzetti, Giovanni</subfield>
+    <subfield code="d">1675-1751</subfield>
+    <subfield code="1">(DE-588)120089807</subfield>
+    <subfield code="2">gnd</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Bernoulli, Daniel</subfield>
+    <subfield code="d">1700-1782</subfield>
+    <subfield code="1">(DE-588)118656503</subfield>
+    <subfield code="e">Adressat</subfield>
+    <subfield code="4">rcp</subfield>
+  </datafield>
+  <datafield tag="751" ind1=" " ind2=" ">
+    <subfield code="a">Basel</subfield>
+    <subfield code="1">(DE-588)4004617-5</subfield>
+  </datafield>
+  <datafield tag="773" ind1="1" ind2="A">
+    <subfield code="g">Bl.3-4</subfield>
+    <subfield code="j">3-4</subfield>
+    <subfield code="t">Briefe von und an verschiedene Bernoullis</subfield>
+    <subfield code="w">000207025</subfield>
+  </datafield>
+  <datafield tag="903" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli, Daniel I (1700-1782)</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">Briefe = Correspondance</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">bernoulli</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">collect_this sammlung</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli, Nicolaus I (1687-1759)</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="n">CH</subfield>
+    <subfield code="a">Basel UB</subfield>
+    <subfield code="b">Handschriften</subfield>
+    <subfield code="p">L Ia 676:Bl.3-4</subfield>
+    <subfield code="q">Benutzung eingeschränkt</subfield>
+  </datafield>
+</record>
+
+</collection>

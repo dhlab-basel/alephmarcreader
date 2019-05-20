@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+      <leader>00000ntm  22000004u 4500</leader>
+      <controlfield tag="FMT">BK</controlfield>
+      <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+      <controlfield tag="008">040702s1705    gw            00    lat</controlfield>
+      <datafield tag="046" ind1=" " ind2=" ">
+        <subfield code="a">s</subfield>
+        <subfield code="c">1705.09.21</subfield>
+      </datafield>
+      <datafield tag="090" ind1=" " ind2=" ">
+        <subfield code="a">5211</subfield>
+        <subfield code="b">LIDOS Bernoulli-Edition</subfield>
+      </datafield>
+      <datafield tag="100" ind1="1" ind2=" ">
+        <subfield code="a">Leibniz, Gottfried Wilhelm</subfield>
+        <subfield code="d">1646-1716</subfield>
+        <subfield code="1">(DE-588)118571249</subfield>
+        <subfield code="e">Autor</subfield>
+        <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="245" ind1="1" ind2="0">
+        <subfield code="a">Brief an Jacob Hermann</subfield>
+        <subfield code="c">von Gottfried Wilhelm Leibniz</subfield>
+      </datafield>
+      <datafield tag="250" ind1=" " ind2=" ">
+        <subfield code="a">Abschrift</subfield>
+        <subfield code="b">von der Hand Hermanns</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="0">
+        <subfield code="a">Dabam Hannoverae</subfield>
+        <subfield code="c">21. Septemb. 1705</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">1 Bl. (2 beschriebene S.)</subfield>
+        <subfield code="c">33.5 x 21 cm</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+        <subfield code="a">Hermanns Abschrift ist in Basel als Beilage im Briefwechsel von Joh. II B. und Maupertuis erhalten</subfield>
+      </datafield>
+      <datafield tag="581" ind1=" " ind2=" ">
+        <subfield code="a">Druck in: Leibniz, Math. Schriften 4, pp.284-285; Hist. Berlin 1757, pp.484-485; Dutens 3, pp.522-533, Nr. VI</subfield>
+      </datafield>
+      <datafield tag="506" ind1=" " ind2=" ">
+        <subfield code="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal</subfield>
+      </datafield>
+      <datafield tag="541" ind1=" " ind2=" ">
+        <subfield code="f">Öffentliche Bibliothek der Universität Basel</subfield>
+      </datafield>
+      <datafield tag="546" ind1=" " ind2=" ">
+        <subfield code="a">Lateinisch</subfield>
+      </datafield>
+      <datafield tag="533" ind1=" " ind2=" ">
+        <subfield code="n">NLB Hannover, LBr 396, fo. 20-21 (Konzept); Ms Berlin Akad.d.Wiss. Hschr. 3,2 pp.16-18 (Nr. 6) (Kopie nach der verlorenen Abfertigung)</subfield>
+      </datafield>
+      <datafield tag="542" ind1="1" ind2="1">
+        <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+        <subfield code="a">Hermann, Jacob</subfield>
+        <subfield code="d">1678-1733</subfield>
+        <subfield code="1">(DE-588)119112450</subfield>
+        <subfield code="e">Schreiber/Scriptorium</subfield>
+        <subfield code="4">scr</subfield>
+        <subfield code="e">Adressat</subfield>
+        <subfield code="4">rcp</subfield>
+      </datafield>
+      <datafield tag="751" ind1=" " ind2=" ">
+        <subfield code="a">Hannover</subfield>
+        <subfield code="1">(DE-588)4023349-2</subfield>
+      </datafield>
+      <datafield tag="773" ind1="1" ind2="A">
+        <subfield code="g">Bl.170a</subfield>
+        <subfield code="j">170</subfield>
+        <subfield code="t">Bernoulliana: Gothaer Bestand. Briefe an die Bernoullis von Maupertuis</subfield>
+        <subfield code="w">000265385</subfield>
+      </datafield>
+      <datafield tag="903" ind1=" " ind2=" ">
+        <subfield code="a">Leibniz, Gottfried Wilhelm (1646-1716)</subfield>
+      </datafield>
+      <datafield tag="906" ind1=" " ind2=" ">
+        <subfield code="a">Briefe = Correspondance</subfield>
+      </datafield>
+      <datafield tag="909" ind1=" " ind2=" ">
+        <subfield code="f">bernoulli</subfield>
+      </datafield>
+      <datafield tag="909" ind1=" " ind2=" ">
+        <subfield code="f">collect_this sammlung</subfield>
+      </datafield>
+      <datafield tag="830" ind1=" " ind2=" ">
+        <subfield code="a">Hermann, Jacob (1678-1733)</subfield>
+      </datafield>
+      <datafield tag="852" ind1=" " ind2=" ">
+        <subfield code="n">CH</subfield>
+        <subfield code="a">Basel UB</subfield>
+        <subfield code="b">Handschriften</subfield>
+        <subfield code="p">L Ia 708:Bl.170a</subfield>
+        <subfield code="q">Benutzung eingeschränkt</subfield>
+      </datafield>
+    </record>
+
+</collection>

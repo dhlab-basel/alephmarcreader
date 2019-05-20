@@ -1,0 +1,369 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<find-doc>
+<record>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00000ntm--22000004u-4500</fixfield>
+<fixfield id="008">040702s1705----gw------------00----lat--</fixfield>
+<varfield id="046" i1=" " i2=" ">
+<subfield label="a">s</subfield>
+<subfield label="c">1705.09.21</subfield>
+</varfield>
+<varfield id="090" i1=" " i2=" ">
+<subfield label="a">5211</subfield>
+<subfield label="b">LIDOS Bernoulli-Edition</subfield>
+</varfield>
+<varfield id="100" i1="1" i2=" ">
+<subfield label="a">Leibniz, Gottfried Wilhelm</subfield>
+<subfield label="d">1646-1716</subfield>
+<subfield label="1">(DE-588)118571249</subfield>
+<subfield label="e">Autor</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="1" i2="0">
+<subfield label="a">Brief an Jacob Hermann</subfield>
+<subfield label="c">von Gottfried Wilhelm Leibniz</subfield>
+</varfield>
+<varfield id="250" i1=" " i2=" ">
+<subfield label="a">Abschrift</subfield>
+<subfield label="b">von der Hand Hermanns</subfield>
+</varfield>
+<varfield id="264" i1=" " i2="0">
+<subfield label="a">Dabam Hannoverae</subfield>
+<subfield label="c">21. Septemb. 1705</subfield>
+</varfield>
+<varfield id="300" i1=" " i2=" ">
+<subfield label="a">1 Bl. (2 beschriebene S.)</subfield>
+<subfield label="c">33.5 x 21 cm</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+</varfield>
+<varfield id="500" i1=" " i2=" ">
+<subfield label="a">Hermanns Abschrift ist in Basel als Beilage im Briefwechsel von Joh. II B. und Maupertuis erhalten</subfield>
+</varfield>
+<varfield id="581" i1=" " i2=" ">
+<subfield label="a">Druck in: Leibniz, Math. Schriften 4, pp.284-285; Hist. Berlin 1757, pp.484-485; Dutens 3, pp.522-533, Nr. VI</subfield>
+</varfield>
+<varfield id="506" i1=" " i2=" ">
+<subfield label="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal</subfield>
+</varfield>
+<varfield id="541" i1=" " i2=" ">
+<subfield label="f">Öffentliche Bibliothek der Universität Basel</subfield>
+</varfield>
+<varfield id="546" i1=" " i2=" ">
+<subfield label="a">Lateinisch</subfield>
+</varfield>
+<varfield id="533" i1=" " i2=" ">
+<subfield label="n">NLB Hannover, LBr 396, fo. 20-21 (Konzept); Ms Berlin Akad.d.Wiss. Hschr. 3,2 pp.16-18 (Nr. 6) (Kopie nach der verlorenen Abfertigung)</subfield>
+</varfield>
+<varfield id="542" i1="1" i2="1">
+<subfield label="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+</varfield>
+<varfield id="700" i1="1" i2=" ">
+<subfield label="a">Hermann, Jacob</subfield>
+<subfield label="d">1678-1733</subfield>
+<subfield label="1">(DE-588)119112450</subfield>
+<subfield label="e">Schreiber/Scriptorium</subfield>
+<subfield label="4">scr</subfield>
+<subfield label="e">Adressat</subfield>
+<subfield label="4">rcp</subfield>
+</varfield>
+<varfield id="751" i1=" " i2=" ">
+<subfield label="a">Hannover</subfield>
+<subfield label="1">(DE-588)4023349-2</subfield>
+</varfield>
+<varfield id="773" i1="1" i2="A">
+<subfield label="g">Bl.170a</subfield>
+<subfield label="j">170</subfield>
+<subfield label="t">Bernoulliana: Gothaer Bestand. Briefe an die Bernoullis von Maupertuis</subfield>
+<subfield label="w">000265385</subfield>
+</varfield>
+<varfield id="903" i1=" " i2=" ">
+<subfield label="a">Leibniz, Gottfried Wilhelm (1646-1716)</subfield>
+</varfield>
+<varfield id="906" i1=" " i2=" ">
+<subfield label="a">Briefe = Correspondance</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">bernoulli</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">collect_this sammlung</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">LIDOS</subfield>
+<subfield label="b">20</subfield>
+<subfield label="c">20041020</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1859</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="c">20090718</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1301</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20100909</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1732</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1050</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20101117</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1737</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20101216</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0926</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">OSC</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20110114</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1034</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">OSC</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20110114</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1151</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-manage</subfield>
+<subfield label="c">20110504</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0956</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20110505</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1508</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20110509</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1504</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">GES</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20120120</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1523</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20130314</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1058</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20140521</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1205</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140521</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1206</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p21-batch</subfield>
+<subfield label="c">20140522</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1125</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0945</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0950</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p18-batch</subfield>
+<subfield label="c">20140822</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0954</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150813</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1124</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-NA</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150813</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1141</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-ANW2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20151110</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1031</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-ANW2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20151209</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1351</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1446</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1813</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20160326</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0828</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1639</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1732</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BMT</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20160929</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1823</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BMT</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20160929</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1834</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20160929</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1835</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170324</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1633</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170412</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1009</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170412</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1016</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170912</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1010</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20171109</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1138</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20171202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1610</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20171213</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0949</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20180330</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1006</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">manage-18</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20180717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">2029</subfield>
+</varfield>
+<varfield id="830" i1=" " i2=" ">
+<subfield label="a">Hermann, Jacob (1678-1733)</subfield>
+</varfield>
+<varfield id="852" i1=" " i2=" ">
+<subfield label="n">CH</subfield>
+<subfield label="a">Basel UB</subfield>
+<subfield label="b">Handschriften</subfield>
+<subfield label="p">L Ia 708:Bl.170a</subfield>
+<subfield label="q">Benutzung eingeschränkt</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>MJXFN6X3DA3G73H672T3VYKRKXNL8RIFI14SMPC2KA8XD9HNFY</session-id>
+</find-doc>
+ 

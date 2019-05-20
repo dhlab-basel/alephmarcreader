@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <leader>00000ntm  22000004u 4500</leader>
+  <controlfield tag="FMT">BK</controlfield>
+  <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+  <controlfield tag="008">040702s1703    ne            00    lat</controlfield>
+  <datafield tag="046" ind1=" " ind2=" ">
+    <subfield code="a">s</subfield>
+    <subfield code="c">1703.08.27</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">2138</subfield>
+    <subfield code="b">LIDOS Bernoulli-Edition</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Bernoulli, Johann</subfield>
+    <subfield code="d">1667-1748</subfield>
+    <subfield code="1">(DE-588)118509969</subfield>
+    <subfield code="e">Autor</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Brief an Rektor und Regenz der Universität Basel</subfield>
+    <subfield code="c">von Johann I Bernoulli</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="0">
+    <subfield code="a">Dabam Groningae</subfield>
+    <subfield code="c">a d. VI Kal. Septemb. MDCCIII</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 Brief</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="c">Dokument=Item=Pièce</subfield>
+  </datafield>
+  <datafield tag="490" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli-Archiv. I, Briefe von den Bernoulli. Johann (1667-1748), Briefe von Johann I Bernoulli (1667-1748)</subfield>
+    <subfield code="i">3</subfield>
+    <subfield code="v">3</subfield>
+    <subfield code="w">000079893</subfield>
+  </datafield>
+  <datafield tag="583" ind1="0" ind2=" ">
+    <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Mit Beizettel</subfield>
+  </datafield>
+  <datafield tag="581" ind1=" " ind2=" ">
+    <subfield code="i">Druck</subfield>
+    <subfield code="a">Joh. I B. Briefe 1, p.444</subfield>
+  </datafield>
+  <datafield tag="506" ind1=" " ind2=" ">
+    <subfield code="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal</subfield>
+  </datafield>
+  <datafield tag="541" ind1=" " ind2=" ">
+    <subfield code="f">Öffentliche Bibliothek der Universität Basel</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Lateinisch</subfield>
+  </datafield>
+  <datafield tag="542" ind1="1" ind2="1">
+    <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2=" ">
+    <subfield code="a">Autograph</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Universität Basel</subfield>
+    <subfield code="b">Regenz</subfield>
+    <subfield code="1">(DE-588)1085854191</subfield>
+    <subfield code="e">Adressat</subfield>
+    <subfield code="4">rcp</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Universität Basel</subfield>
+    <subfield code="b">Rektorat</subfield>
+    <subfield code="1">(DE-588)1087006392</subfield>
+    <subfield code="e">Adressat</subfield>
+    <subfield code="4">rcp</subfield>
+  </datafield>
+  <datafield tag="751" ind1=" " ind2=" ">
+    <subfield code="a">Basel</subfield>
+    <subfield code="1">(DE-588)4004617-5</subfield>
+  </datafield>
+  <datafield tag="903" ind1=" " ind2=" ">
+    <subfield code="a">Rektor; Regenz Universität Basel</subfield>
+  </datafield>
+  <datafield tag="906" ind1=" " ind2=" ">
+    <subfield code="a">Briefe = Correspondance</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">bernoulli</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="f">collect_this archivgut</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="n">CH</subfield>
+    <subfield code="a">Basel UB</subfield>
+    <subfield code="b">Handschriften</subfield>
+    <subfield code="p">Archiv Bernoulli Ib, Johann (1667-1748), Nr.3</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2=" ">
+    <subfield code="a">Bernoulli, Johann I (1667-1748)</subfield>
+  </datafield>
+</record>
+
+</collection>

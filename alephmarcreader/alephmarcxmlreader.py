@@ -31,19 +31,16 @@ class AlephMarcXMLReader(AbstractAlephMarcReader):
             raise
     __parseMarcXML.__annotations__ = {'file_path': str, 'return': etree.ElementTree}
 
-    def _AbstractAlephMarcReader__get_subfield_text(self, marc_ele, index):
+    def _AbstractAlephMarcReader__get_subfield_texts(self, marc_ele, index):
         """
         Given a marc field, get the indicated subfield's text or False if it does not exist.
         :param marc_ele: marc field.
         :param index: index of the subfield.
-        :return: str|False.
+        :return: [str].
         """
-        ele = marc_ele.xpath(".//marcslim:subfield[@code='" + index + "']", namespaces=self.__namespaces)
-        if len(ele) == 1:
-            return ele[0].text
-        else:
-            return False
-    _AbstractAlephMarcReader__get_subfield_text.__annotations__ = {'index': str, 'marc_ele': etree.Element, 'return': str}
+        eles = marc_ele.xpath(".//marcslim:subfield[@code='" + index + "']", namespaces=self.__namespaces)
+        return list(map(lambda ele: ele.text, eles))
+    _AbstractAlephMarcReader__get_subfield_texts.__annotations__ = {'index': str, 'marc_ele': etree.Element, 'return': [str]}
 
     def _AbstractAlephMarcReader__get_field(self, index):
         """

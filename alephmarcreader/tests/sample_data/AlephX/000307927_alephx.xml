@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<find-doc>
+<record>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00000ntm--22000004u-4500</fixfield>
+<fixfield id="008">040702s1763----xx------------00----fre--</fixfield>
+<varfield id="024" i1="7" i2=" ">
+<subfield label="a">10.7891/e-manuscripta-39903</subfield>
+<subfield label="2">doi</subfield>
+</varfield>
+<varfield id="046" i1=" " i2=" ">
+<subfield label="a">s</subfield>
+<subfield label="c">1763.03.26</subfield>
+</varfield>
+<varfield id="100" i1="1" i2=" ">
+<subfield label="a">Bernoulli, Johann</subfield>
+<subfield label="d">1710-1790</subfield>
+<subfield label="1">(DE-588)117589136</subfield>
+<subfield label="e">Autor</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="1" i2="0">
+<subfield label="a">Brief an Jean Jallabert</subfield>
+<subfield label="c">von Johann II Bernoulli</subfield>
+</varfield>
+<varfield id="264" i1=" " i2="0">
+<subfield label="a">[S.l.]</subfield>
+<subfield label="c">ce 26. Mars 1763</subfield>
+</varfield>
+<varfield id="300" i1=" " i2=" ">
+<subfield label="a">3 S.</subfield>
+<subfield label="c">verschiedene Formate</subfield>
+</varfield>
+<varfield id="351" i1=" " i2=" ">
+<subfield label="c">Dokument=Item=Pièce</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+</varfield>
+<varfield id="500" i1=" " i2=" ">
+<subfield label="a">Siegel</subfield>
+</varfield>
+<varfield id="533" i1=" " i2=" ">
+<subfield label="n">Eine Fotokopie (negativ) findet sich unter Signatur L Ia 53:Nr.11</subfield>
+</varfield>
+<varfield id="546" i1=" " i2=" ">
+<subfield label="a">Französisch</subfield>
+</varfield>
+<varfield id="583" i1="1" i2=" ">
+<subfield label="b">Digitalisierung=Digitization=Numérisation</subfield>
+<subfield label="i">TIFF</subfield>
+<subfield label="c">06.12.2015</subfield>
+</varfield>
+<varfield id="542" i1="1" i2="1">
+<subfield label="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+</varfield>
+<varfield id="655" i1=" " i2=" ">
+<subfield label="a">Autograph</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Bernoulli, Emanuel</subfield>
+<subfield label="d">1749-1817</subfield>
+<subfield label="1">(DE-588)1089910533</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="1" i2="7">
+<subfield label="a">Bernoulli, Susanna</subfield>
+<subfield label="d">1715-1803</subfield>
+<subfield label="1">(DE-588)1089911661</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="600" i1="0" i2="7">
+<subfield label="a">Deuchert</subfield>
+<subfield label="2">resource</subfield>
+</varfield>
+<varfield id="610" i1="2" i2="7">
+<subfield label="a">Eck, van &amp; c.</subfield>
+<subfield label="g">London</subfield>
+<subfield label="2">resource</subfield>
+</varfield>
+<varfield id="610" i1="2" i2="7">
+<subfield label="a">Lefort Beaumont</subfield>
+<subfield label="g">Genève</subfield>
+<subfield label="1">(DE-588)1086218213</subfield>
+<subfield label="2">gnd</subfield>
+</varfield>
+<varfield id="700" i1="1" i2=" ">
+<subfield label="a">Jallabert, Jean</subfield>
+<subfield label="d">1712-1768</subfield>
+<subfield label="1">(DE-588)100289665</subfield>
+<subfield label="e">Adressat</subfield>
+<subfield label="4">rcp</subfield>
+</varfield>
+<varfield id="773" i1="1" i2="A">
+<subfield label="g">Nr.4</subfield>
+<subfield label="j">4</subfield>
+<subfield label="t">Bernoulliana: Älterer Bestand und einzelne Neuerwerbungen. 54, 7 Briefe an Jean Jallabert</subfield>
+<subfield label="w">000204111</subfield>
+</varfield>
+<varfield id="903" i1=" " i2=" ">
+<subfield label="a">Jallabert, Jean (1712-1768)</subfield>
+</varfield>
+<varfield id="906" i1=" " i2=" ">
+<subfield label="a">Briefe = Correspondance</subfield>
+</varfield>
+<varfield id="907" i1=" " i2=" ">
+<subfield label="g">CF Elektron. Daten Fernzugriff=Fichier online</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">bernoulli</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">emanuscriptabsub</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">collect_this sammlung</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BMA2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20170202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1124</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170324</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1806</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1734</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171213</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1124</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20180330</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1032</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">manage-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20180717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">2031</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20181121</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1231</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20181121</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1233</subfield>
+</varfield>
+<varfield id="830" i1=" " i2=" ">
+<subfield label="a">Bernoulli, Johann II (1710-1790)</subfield>
+</varfield>
+<varfield id="852" i1=" " i2=" ">
+<subfield label="n">CH</subfield>
+<subfield label="a">Basel UB</subfield>
+<subfield label="b">Handschriften</subfield>
+<subfield label="p">L Ia 54:Nr.4</subfield>
+<subfield label="q">Benutzung eingeschränkt</subfield>
+</varfield>
+<varfield id="856" i1=" " i2="1">
+<subfield label="u">http://dx.doi.org/10.7891/e-manuscripta-39903</subfield>
+<subfield label="z">Digitalisat in e-manuscripta</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>A2EJFARUPE21GUIF9HX3EH558JH6UFKDMKVIGY12QQ1TTE6HLG</session-id>
+</find-doc>
