@@ -119,7 +119,7 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(content[0], u'Nic. II B. antwortet versp\xe4tet auf einen Brief de Brui\xe8res, da er dessen Adresse erst von dessen Advokaten, M. Polin, erfragen musste. Er hat Brui\xe8re "au Faucon" besucht, ihn aber nicht angetroffen. Brui\xe8re hat ihn in seinem Brief um Aukl\xe4rung in einer bestimmten Sache gebeten. Von Polin hat Nic. II B. erfahren, dass es sich um das Dividieren handelt. Polin hat ihm aber dies bereits selbst erl\xe4utert.')
 
-    def test_get_content_summary(self):
+    def test_get_language(self):
         marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000054774.xml')
 
         lang = marcx_rd.get_language()
@@ -160,3 +160,69 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(mentioned_organisation[1].gnd, u'(DE-588)1087006392')
         self.assertEqual(mentioned_organisation[1].roles, [u'rcp'])
         self.assertEqual(mentioned_organisation[1].division, u'Rektorat')
+
+    def test_get_supplement_remarks(self):
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059552.xml')
+
+        suppl_remarks = marcx_rd.get_supplement_remarks()
+
+        self.assertEqual(len(suppl_remarks), 1)
+        self.assertEqual(suppl_remarks[0], u'Beigelegt ist das Couvert mit Adresse und Siegel.')
+
+    def test_get_document_state(self):
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059552.xml')
+
+        doc_states = marcx_rd.get_document_state()
+
+        self.assertEqual(len(doc_states), 1)
+        self.assertEqual(doc_states[0], u'Kopie')
+
+    def test_get_original_date_and_place(self):
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059552.xml')
+
+        orig_date = marcx_rd.get_original_date_and_place()
+
+        self.assertEqual(len(orig_date), 1)
+        self.assertEqual(orig_date[0].date, u'ce 5.r Mars 1724')
+        self.assertEqual(orig_date[0].place, u'Berne')
+
+    def test_get_references_to_related_entries(self):
+        # Test Field 533
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059794.xml')
+
+        references = marcx_rd.get_references_to_related_entries()
+
+        self.assertEqual(len(references), 1)
+        self.assertEqual(references[0], u'NLB Hannover, LBr 396, fo. 20-21 (Konzept); Ms Berlin Akad.d.Wiss. Hschr. 3,2 pp.16-18 (Nr. 6) (Kopie nach der verlorenen Abfertigung)')
+
+        # Test Field 534
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059552.xml')
+
+        references = marcx_rd.get_references_to_related_entries()
+
+        self.assertEqual(len(references), 1)
+        self.assertEqual(references[0], u'Im April 1954 angeboten in Paris durch C. F. Roux-Devillas; 2004 in Bern Burgerbibliothek Mss.h.h.XIV, 151 (Vorlage f\xfcr Katalogaufnahme)')
+
+        # Test Field 544 (and 533)
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000054774.xml')
+
+        references = marcx_rd.get_references_to_related_entries()
+
+        self.assertEqual(len(references), 2)
+        self.assertEqual(references[0], u'Entwurf: Basel UB, Handschriften: L Ia 21:1:Bl.14a-c (unvollst\xe4ndig)')
+        self.assertEqual(references[1], u'Siehe auch Signatur L Ia 48:Bl.28')
+
+    def test_get_bibliographic_references(self):
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000056870.xml')
+
+        doc_states = marcx_rd.get_bibliographic_references()
+
+        self.assertEqual(len(doc_states), 1)
+        self.assertEqual(doc_states[0].get_pretty_string(), u'Druck: Joh. I B. Briefe 1, p.444')
+        self.assertEqual(doc_states[0].prefix, u'Druck')
+        self.assertEqual(doc_states[0].reference, u'Joh. I B. Briefe 1, p.444')
+
+
+
+
+

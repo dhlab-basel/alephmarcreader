@@ -74,6 +74,36 @@ class AbstractAlephMarcReader(ABC):
             self.dimension = dimension
             self.supplement = supplement
 
+    class OriginalDate:
+        """
+        Represents the date, as written on the letter.
+        :param str|False date; transcription of the date, as given in the letter, if any.
+        :param str|False place; transcription of the place, as given in the letter, if any.
+        """
+        def __init__(self, date, place):
+            self.date = date
+            self.place = place
+
+    class BiblioReference:
+        """
+        Represents bibliographic references.
+        :param str reference; a string refering to one or more bibliographic items
+        :param str|False prefix; prefix to the bibliographic item, if any. (e.g. "Abgedruckt in", "Inhaltsangabe", etc)
+        """
+        def __init__(self, reference, prefix):
+            self.reference = reference
+            self.prefix = prefix
+
+        def get_pretty_string(self):
+            """
+            Returns a string combining prefix (if existing) and reference, separated by ': '
+            :return: String combining prefix and reference
+            """
+            if self.prefix:
+                return u'{}: {}'.format(self.prefix, self.reference)
+            else:
+                return self.reference
+
     def __init__(self, gnd_index):
         """
         :param gnd_index: index of the GND subfield.
@@ -141,7 +171,6 @@ class AbstractAlephMarcReader(ABC):
         division = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'b'))
 
         return self.Organisation(name, gnd, roles, place, division)
-
 
     def get_author(self):
         """
@@ -354,3 +383,111 @@ class AbstractAlephMarcReader(ABC):
         return recipient_organisation
 
     get_recipient_organisation.__annotations__ = {'return': [Organisation]}
+
+    def get_supplement_remarks(self):
+        """
+        Returns comments on supplementing material following the letter.
+        :return: [str]
+        """
+        remarks = []
+
+        for field in self.__get_field('525'):
+            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+
+            if footnote_text:
+                remarks.append(footnote_text)
+
+        return remarks
+
+    get_supplement_remarks.__annotations__ = {'return': [str]}
+
+    def get_document_state(self):
+        """
+        Returns a description of the document state. (i.e. "original", "copy", "draft", etc.)
+        :return: [str]
+        """
+        states = []
+
+        for field in self.__get_field('250'):
+            document_state = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+
+            if document_state:
+                states.append(document_state)
+
+        return states
+
+    get_document_state.__annotations__ = {'return': [str]}
+
+    def get_original_date_and_place(self):
+        """
+        Returns a transcription of the date and place, as given on the letter.
+        (If it starts with square bracket, it's conjectured.)
+        :return: [OriginalDate]
+        """
+        original_dates = []
+
+        for field in self.__get_field('264'):
+            date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'))
+            place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            # TODO Ignore Fields starting wit '['?
+
+            orig_date = self.OriginalDate(date, place)
+            original_dates.append(orig_date)
+
+        return original_dates
+
+    get_original_date_and_place.__annotations__ = {'return': [OriginalDate]}
+
+    def get_references_to_related_entries(self):
+        """
+        Returns a list of related entries.
+        That is usually the case, if there are several document stages of the same letter.
+        (E.g. Original, draft, copy, etc.)
+        :return: [str]
+        """
+        references = []
+
+        for field in self.__get_field('533'):
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            if ref:
+                references.append(ref)
+
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            if ref:
+                references.append(ref)
+
+        for field in self.__get_field('534'):
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            if ref:
+                references.append(ref)
+
+        for field in self.__get_field('544'):
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            if ref:
+                references.append(ref)
+
+        return references
+
+    get_references_to_related_entries.__annotations__ = {'return': [OriginalDate]}
+
+    def get_bibliographic_references(self):
+        """
+        Returns bibliographic references relevant to the letter. (Usually, where it has been printed.)
+        :return: [BiblioReference]
+        """
+        references = []
+
+        for field in self.__get_field('581'):
+            prefix = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'i'))
+            reference = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            biblio_ref = self.BiblioReference(reference, prefix)
+            references.append(biblio_ref)
+
+        return references
+
+    get_bibliographic_references.__annotations__ = {'return': [BiblioReference]}
+
+
+
+
+
