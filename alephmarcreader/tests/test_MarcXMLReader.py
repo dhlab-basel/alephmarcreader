@@ -224,7 +224,33 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(doc_states[0].prefix, u'Druck')
         self.assertEqual(doc_states[0].reference, u'Joh. I B. Briefe 1, p.444')
 
+    def test_unexpected_cardinality(self):
+        """
+        Tests if the correct warning is printed, when a subfield occurs more than once,
+        where a single occurrence is expected.
 
+        This is done by redirecting the standard error stream `stderr` to a `StringIO`. Then, the warning message
+        is called (by using a fake MarcXML with a subfield cardinality that is not to be expected. Finally, the
+        `getvalue()` of the `StringIO` can be compared with the expected warning.
+
+        See https://stackoverflow.com/questions/33767627/python-write-unittest-for-console-print
+        """
+        marcxml_rd = AlephMarcXMLReader('alephmarcreader/tests/sample_data/MarcXML/wrong_cardinality.xml')
+
+        import sys
+        previous = sys.stderr
+
+        from io import StringIO
+        catch_err = StringIO()
+
+        sys.stderr = catch_err
+        # should print a warning to catch_err
+        marcxml_rd.get_date()
+        self.assertEqual(catch_err.getvalue(), u'!!! WARNING: In '
+                                    u'\'alephmarcreader/tests/sample_data/MarcXML/wrong_cardinality.xml\', '
+                                    u'Field \'046\', Subfield \'c\': Expected maximum 1 Subfield, found 2.\n')
+
+        sys.stderr = previous
 
 
 

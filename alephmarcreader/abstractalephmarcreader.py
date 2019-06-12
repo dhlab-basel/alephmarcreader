@@ -1,4 +1,5 @@
 import abc
+import sys
 
 # compatible with Python 2 *and* 3:
 ABC = abc.ABCMeta('ABC', (object,), {'__slots__': ()})
@@ -104,11 +105,12 @@ class AbstractAlephMarcReader(ABC):
             else:
                 return self.reference
 
-    def __init__(self, gnd_index):
+    def __init__(self, gnd_index, file_path):
         """
         :param gnd_index: index of the GND subfield.
         """
         self._gnd_index = gnd_index
+        self._file_path = file_path
 
     @abc.abstractmethod
     def __get_subfield_texts(self, marc_field, index):
@@ -118,32 +120,41 @@ class AbstractAlephMarcReader(ABC):
     def __get_field(self, index):
         pass
 
-    def _handle_subfields_cardinality_max_one(self, subfields):
+    def _handle_subfields_cardinality_max_one(self, subfields, field_tag, subfield_code):
         """
         Handles subfields whose occurrence is max one (optional):
         - empty list -> False
         - one entry -> str
+        If more than one Subfield should occur, the first one is used and a warning printed to `stderr`.
         :param [str] subfields: the subfields to handle
+        :param str field_tag: The marc field tag of the field containing subfields
+        :param str subfield_code: The marc subfield code of subfields
         :return: False | str
         """
         if len(subfields) == 1:
             return subfields[0]
+        elif len(subfields) > 1:
+            sys.stderr.write(u'!!! WARNING: In \'{}\', Field \'{}\', Subfield \'{}\': '
+                             u'Expected maximum 1 Subfield, found {}.\n'
+                             .format(self._file_path, field_tag, subfield_code, len(subfields)))
+            return subfields[0]
         else:
             return False
 
-    def _get_person_info(self, marc_field):
+    def _get_person_info(self, marc_field, field_tag):
         """
         Extracts person information from a Marc field incl. the GND, if any.
         :param pymarc.field.Field marc_field: the Marc21 field that contains information about a person.
-        :param str gnd_index: the index of the GND subfield.
+        :param str field_tag: The marc field tag of marc_field
         :return: Person
         """
 
-        name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'a'))
+        name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'a'), field_tag, 'a')
 
-        date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'd'))
+        date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'd'), field_tag, 'd')
 
-        gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, self._gnd_index))
+        gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, self._gnd_index),
+                                                         field_tag, self._gnd_index)
         if gnd:
             gnd = gnd.replace(',', '') # get rid of trailing comma
 
@@ -152,23 +163,26 @@ class AbstractAlephMarcReader(ABC):
 
         return self.Person(name, date, gnd, roles)
 
-    def _get_organisation_info(self, marc_field):
+    def _get_organisation_info(self, marc_field, field_tag):
         """
         Extracts organisation info from a Marc field incl. the GND, if any.
+        :param pymarc.field.Field marc_field: the Marc21 field that contains information about a person.
+        :param str field_tag: The marc field tag of marc_field
         :return: [Organisation]
         """
-        name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'a'))
+        name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'a'), field_tag, 'a')
 
-        gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, self._gnd_index))
+        gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, self._gnd_index),
+                                                         field_tag, self._gnd_index)
         if gnd:
             gnd = gnd.replace(',', '')  # get rid of trailing comma
 
         # get rid of trailing comma in roles
         roles = list(map(lambda role: role.replace(',', ''), self.__get_subfield_texts(marc_field, '4')))
 
-        place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'g'))
+        place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'g'), field_tag, 'g')
 
-        division = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'b'))
+        division = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(marc_field, 'b'), field_tag, 'b')
 
         return self.Organisation(name, gnd, roles, place, division)
 
@@ -179,11 +193,11 @@ class AbstractAlephMarcReader(ABC):
         """
         author = []
         for field in self.__get_field('100'):
-            author.append(self._get_person_info(field))
+            author.append(self._get_person_info(field, '100'))
 
         # check for recipients (700) that are actually authors
         for field in self.__get_field('700'):
-            person = self._get_person_info(field)
+            person = self._get_person_info(field, '700')
 
             if "aut" in person.roles:
                 author.append(person)
@@ -198,7 +212,7 @@ class AbstractAlephMarcReader(ABC):
         """
         recipient = []
         for field in self.__get_field('700'):
-            person = self._get_person_info(field)
+            person = self._get_person_info(field, '700')
 
             if "rcp" in person.roles:
                 recipient.append(person)
@@ -213,7 +227,7 @@ class AbstractAlephMarcReader(ABC):
         """
         mentioned = []
         for field in self.__get_field('600'):
-            mentioned.append(self._get_person_info(field))
+            mentioned.append(self._get_person_info(field, '600'))
 
         return mentioned
     get_mentioned_person.__annotations__ = {'return': [Person]}
@@ -225,7 +239,7 @@ class AbstractAlephMarcReader(ABC):
         """
         date = []
         for field in self.__get_field('046'):
-            date_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'))
+            date_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'), '046', 'c')
 
             if date_text:
                 date.append(date_text)
@@ -241,9 +255,10 @@ class AbstractAlephMarcReader(ABC):
         creation_place = []
 
         for field in self.__get_field('751'):
-            name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            name = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '751', 'a')
 
-            gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, self._gnd_index))
+            gnd = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, self._gnd_index), '751',
+                                                             self._gnd_index)
 
             cp = self.Place(name, gnd)
             creation_place.append(cp)
@@ -259,9 +274,9 @@ class AbstractAlephMarcReader(ABC):
         shelfmark = []
 
         for field in self.__get_field('852'):
-            institution = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            institution = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '852', 'a')
 
-            identifier = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'p'))
+            identifier = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'p'), '852', 'p')
 
             sm = self.Shelfmark(institution, identifier)
             shelfmark.append(sm)
@@ -277,7 +292,7 @@ class AbstractAlephMarcReader(ABC):
         footnote = []
 
         for field in self.__get_field('500'):
-            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '500', 'a')
 
             if footnote_text:
                 footnote.append(footnote_text)
@@ -293,7 +308,7 @@ class AbstractAlephMarcReader(ABC):
         summary = []
 
         for field in self.__get_field('520'):
-            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '520', 'a')
 
             if footnote_text:
                 summary.append(footnote_text)
@@ -309,7 +324,7 @@ class AbstractAlephMarcReader(ABC):
         external_link = []
 
         for field in self.__get_field('024'):
-            ext_link = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            ext_link = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '024', 'a')
 
             if ext_link:
                 external_link.append(ext_link)
@@ -326,10 +341,10 @@ class AbstractAlephMarcReader(ABC):
         physical_description = []
 
         for field in self.__get_field('300'):
-            extent = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
-            attribute = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'b'))
-            dimension = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'))
-            supplement = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'e'))
+            extent = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '300', 'a')
+            attribute = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'b'), '300', 'b')
+            dimension = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'), '300', 'c')
+            supplement = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'e'), '300', 'e')
 
             physical_description.append(self.Description(extent, attribute, dimension, supplement))
 
@@ -362,7 +377,7 @@ class AbstractAlephMarcReader(ABC):
         """
         mentioned_organisation = []
         for field in self.__get_field('610'):
-            mentioned_organisation.append(self._get_organisation_info(field))
+            mentioned_organisation.append(self._get_organisation_info(field, '610'))
 
         return mentioned_organisation
 
@@ -375,7 +390,7 @@ class AbstractAlephMarcReader(ABC):
         """
         recipient_organisation = []
         for field in self.__get_field('710'):
-            org = self._get_organisation_info(field)
+            org = self._get_organisation_info(field, '710')
 
             if "rcp" in org.roles:
                 recipient_organisation.append(org)
@@ -392,7 +407,7 @@ class AbstractAlephMarcReader(ABC):
         remarks = []
 
         for field in self.__get_field('525'):
-            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            footnote_text = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '525', 'a')
 
             if footnote_text:
                 remarks.append(footnote_text)
@@ -409,7 +424,7 @@ class AbstractAlephMarcReader(ABC):
         states = []
 
         for field in self.__get_field('250'):
-            document_state = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            document_state = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '250', 'a')
 
             if document_state:
                 states.append(document_state)
@@ -427,8 +442,8 @@ class AbstractAlephMarcReader(ABC):
         original_dates = []
 
         for field in self.__get_field('264'):
-            date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'))
-            place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'), '264', 'c')
+            place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '264', 'a')
             # TODO Ignore Fields starting wit '['?
 
             orig_date = self.OriginalDate(date, place)
@@ -448,21 +463,21 @@ class AbstractAlephMarcReader(ABC):
         references = []
 
         for field in self.__get_field('533'):
-            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '533', 'a')
             if ref:
                 references.append(ref)
 
-            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'), '533', 'n')
             if ref:
                 references.append(ref)
 
         for field in self.__get_field('534'):
-            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'), '534', 'n')
             if ref:
                 references.append(ref)
 
         for field in self.__get_field('544'):
-            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'))
+            ref = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'), '544', 'n')
             if ref:
                 references.append(ref)
 
@@ -478,8 +493,8 @@ class AbstractAlephMarcReader(ABC):
         references = []
 
         for field in self.__get_field('581'):
-            prefix = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'i'))
-            reference = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'))
+            prefix = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'i'), '581', 'i')
+            reference = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '581', 'a')
             biblio_ref = self.BiblioReference(reference, prefix)
             references.append(biblio_ref)
 

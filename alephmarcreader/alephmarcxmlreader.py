@@ -13,7 +13,7 @@ class AlephMarcXMLReader(AbstractAlephMarcReader):
         """
         :param str file_path: the path to the MarcXML file.
         """
-        super(AlephMarcXMLReader, self).__init__('1')
+        super(AlephMarcXMLReader, self).__init__('1', file_path)
         self.__root = self.__parseMarcXML(file_path)
         self.__namespaces = {'marcslim': 'http://www.loc.gov/MARC21/slim'}
 

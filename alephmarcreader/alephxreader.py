@@ -13,7 +13,7 @@ class AlephXReader(AbstractAlephMarcReader):
         """
         :param str file_path: the path to the MarcXML file.
         """
-        super(AlephXReader, self).__init__('1')
+        super(AlephXReader, self).__init__('1', file_path)
         self.__root = self.__parseMarcXML(file_path)
 
     def __parseMarcXML(self, file_path):

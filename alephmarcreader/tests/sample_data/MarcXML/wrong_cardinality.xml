@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <leader>00000ntm  22000004u 4500</leader>
+  <controlfield tag="FMT">BK</controlfield>
+  <controlfield tag="LDR">00000ntm  22000004u 4500</controlfield>
+  <controlfield tag="008">040702s1763    xx            00    fre</controlfield>
+  <datafield tag="024" ind1="7" ind2=" ">
+    <subfield code="a">10.7891/e-manuscripta-39903</subfield>
+    <subfield code="2">doi</subfield>
+  </datafield>
+  <datafield tag="046" ind1=" " ind2=" ">
+    <subfield code="a">s</subfield>
+    <subfield code="c">1763.03.26</subfield>
+    <subfield code="c">1763.03.26</subfield>
+  </datafield>
+  
+</record>
+
+</collection>

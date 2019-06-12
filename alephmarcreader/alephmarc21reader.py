@@ -13,7 +13,7 @@ class AlephMarc21Reader(AbstractAlephMarcReader):
         """
         :param str file_path: the path to the Marc21 file.
         """
-        super(AlephMarc21Reader, self).__init__('0')
+        super(AlephMarc21Reader, self).__init__('0', file_path)
         marc21 = self.__get_marc21(file_path)
         self.__record = self.__get_record(marc21)
 
