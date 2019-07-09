@@ -56,10 +56,14 @@ class AbstractAlephMarcReader(ABC):
         Represents a shelfmark.
         :param str|False institution: the name of the institution, if any.
         :param str|False identifier: the identifier, if any.
+        :param str|False country: the country, if any.
+        :param str|False collection: the collection, if any.
         """
-        def __init__(self, institution, identifier):
+        def __init__(self, institution, identifier, country, collection):
             self.institution = institution
             self.identifier = identifier
+            self.country = country
+            self.collection = collection
 
     class Description:
         """
@@ -275,10 +279,11 @@ class AbstractAlephMarcReader(ABC):
 
         for field in self.__get_field('852'):
             institution = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '852', 'a')
-
             identifier = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'p'), '852', 'p')
+            country = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'n'), '852', 'n')
+            collection = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'b'), '852', 'b')
 
-            sm = self.Shelfmark(institution, identifier)
+            sm = self.Shelfmark(institution, identifier, country, collection)
             shelfmark.append(sm)
 
         return shelfmark

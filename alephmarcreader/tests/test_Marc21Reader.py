@@ -68,6 +68,19 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(sm[0].institution, u'ZB Z\xfcrich')
         self.assertEqual(sm[0].identifier, u'Ms H 340, pp. 569-572')
+        self.assertEqual(sm[0].country, u'CH')
+        self.assertEqual(sm[0].collection, False)
+
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000054774.marc')
+
+        sm = marc21_rd.get_shelfmark()
+
+        self.assertEqual(len(sm), 1)
+
+        self.assertEqual(sm[0].institution, u'Basel UB')
+        self.assertEqual(sm[0].identifier, u'L Ia 676:Bl.3-4')
+        self.assertEqual(sm[0].country, u'CH')
+        self.assertEqual(sm[0].collection, u'Handschriften')
 
     def test_get_footnote(self):
         marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
