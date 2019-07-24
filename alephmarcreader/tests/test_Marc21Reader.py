@@ -49,6 +49,28 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(date[0], u'1734.03.12')
 
+    def test_get_standardized_date(self):
+        # Test with precise date
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
+
+        std_date = marc21_rd.get_standardized_date()
+        self.assertEqual(len(std_date), 1)
+        self.assertEqual(std_date[0].start_span, u'1734-03-12')
+        self.assertEqual(std_date[0].end_span, False)
+        self.assertEqual(std_date[0].get_standardized_date_string_KNORA(), u'GREGORIAN:1734-03-12')
+        self.assertEqual(std_date[0].get_standardized_date_string_ISO8601(), u'1734-03-12')
+
+        # Test with time span
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000234529.marc')
+
+        std_date = marc21_rd.get_standardized_date()
+        self.assertEqual(len(std_date), 1)
+        self.assertEqual(std_date[0].start_span, u'1744')
+        self.assertEqual(std_date[0].end_span, u'1782')
+        self.assertEqual(std_date[0].get_standardized_date_string_KNORA(), u'GREGORIAN:1744:1782')
+        self.assertEqual(std_date[0].get_standardized_date_string_ISO8601(), u'1744--1782')
+
+
     def test_creation_place(self):
         marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000055275.marc')
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+      <leader>00000ntm  22000004u 4500</leader>
+      <controlfield tag="008">040702q17441782xx            00    fre</controlfield>
+      <datafield tag="046" ind1=" " ind2=" ">
+        <subfield code="a">q</subfield>
+        <subfield code="c">1744</subfield>
+        <subfield code="e">1782</subfield>
+      </datafield>
+      <datafield tag="090" ind1=" " ind2=" ">
+        <subfield code="a">32</subfield>
+        <subfield code="b">LIDOS Bernoulli-Edition</subfield>
+      </datafield>
+      <datafield tag="100" ind1="1" ind2=" ">
+        <subfield code="a">Bernoulli, Daniel</subfield>
+        <subfield code="d">1700-1782</subfield>
+        <subfield code="1">(DE-588)118656503</subfield>
+        <subfield code="e">Autor</subfield>
+        <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="245" ind1="1" ind2="0">
+        <subfield code="a">Ueber Thermometer</subfield>
+        <subfield code="c">von [Daniel I Bernoulli]</subfield>
+      </datafield>
+      <datafield tag="246" ind1="3" ind2=" ">
+        <subfield code="i">Übergeordneter Titel aus Briefkatalog</subfield>
+        <subfield code="a">Auszüge aus Briefen über physikalische Fragen</subfield>
+      </datafield>
+      <datafield tag="246" ind1="3" ind2=" ">
+        <subfield code="a">Briefe an [Johann III Bernoulli]</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="0">
+        <subfield code="a">[S.l.]</subfield>
+        <subfield code="c">[zwischen 1744 und 1782]</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">1 Bl.</subfield>
+        <subfield code="c">20,5 cm</subfield>
+      </datafield>
+      <datafield tag="351" ind1=" " ind2=" ">
+        <subfield code="c">Dokument=Item=Pièce</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="a">Eine Aufnahme für Bl.57-76 vorgefunden (Bern.-Ed.) (21.7.2015/A100/bot)</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="a">Im Katalog "Neuzeitliche Handschriften" existiert ein separater Eintrag; zusätzlich gibt es im Briefkatalog eine Gesamt-Karte für Bl.57-76 (21.7.2015/A100/bot)</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+        <subfield code="a">Hier sind unter dem Titel "Extraits des lettres de M. Daniel Bernoulli à son neveu sur des matieres des physiques" [Vorblatt im Originalband] diverse undatierte Exzerpte aus Briefen von Dan. B. an Joh. III B. zusammengefasst</subfield>
+      </datafield>
+      <datafield tag="506" ind1=" " ind2=" ">
+        <subfield code="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal. Dieser Band ist stark beschädigt und für die Benutzung bis auf weiteres gesperrt.</subfield>
+      </datafield>
+      <datafield tag="533" ind1=" " ind2=" ">
+        <subfield code="n">Auszug, siehe auch Signatur L Ia 752:Bl.403 (Hinweis auf übergeordneter Karte)</subfield>
+      </datafield>
+      <datafield tag="541" ind1=" " ind2=" ">
+        <subfield code="f">Öffentliche Bibliothek der Universität Basel</subfield>
+      </datafield>
+      <datafield tag="546" ind1=" " ind2=" ">
+        <subfield code="a">Französisch</subfield>
+      </datafield>
+      <datafield tag="583" ind1="1" ind2=" ">
+        <subfield code="b">Verzeichnung=Description=Inventaire</subfield>
+        <subfield code="c">Juli 2015</subfield>
+        <subfield code="f">HAN-Katalogisierungsregeln</subfield>
+        <subfield code="i">Vollständige Rekatalogisierung nach Standortverzeichnis, Briefkatalog und Originalbrief</subfield>
+      </datafield>
+      <datafield tag="583" ind1="0" ind2=" ">
+        <subfield code="b">Konservierung=Preservation=Conservation</subfield>
+        <subfield code="c">09.2011</subfield>
+        <subfield code="i">Der Band ist mit EGT4 klassifiziert und für jegliche Benutzung gesperrt. Tintenfrass und Materialverlust.</subfield>
+      </datafield>
+      <datafield tag="542" ind1="1" ind2="1">
+        <subfield code="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+      </datafield>
+      <datafield tag="773" ind1="1" ind2="A">
+        <subfield code="g">Bl.67</subfield>
+        <subfield code="j">67</subfield>
+        <subfield code="t">Briefe von und an verschiedene Bernoullis</subfield>
+        <subfield code="w">000207025</subfield>
+      </datafield>
+      <datafield tag="903" ind1=" " ind2=" ">
+        <subfield code="a">Bernoulli, Johann III (1744-1807)</subfield>
+      </datafield>
+      <datafield tag="906" ind1=" " ind2=" ">
+        <subfield code="a">Briefe = Correspondance</subfield>
+      </datafield>
+      <datafield tag="909" ind1=" " ind2=" ">
+        <subfield code="f">bernoulli</subfield>
+      </datafield>
+      <datafield tag="909" ind1=" " ind2=" ">
+        <subfield code="f">collect_this sammlung</subfield>
+      </datafield>
+      <datafield tag="830" ind1=" " ind2=" ">
+        <subfield code="a">Bernoulli, Daniel I (1700-1782)</subfield>
+      </datafield>
+      <datafield tag="852" ind1=" " ind2=" ">
+        <subfield code="n">CH</subfield>
+        <subfield code="a">Basel UB</subfield>
+        <subfield code="b">Handschriften</subfield>
+        <subfield code="p">L Ia 676:Bl.67</subfield>
+        <subfield code="q">Benutzung eingeschränkt</subfield>
+      </datafield>
+    </record>
+
+</collection>

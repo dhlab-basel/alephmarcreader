@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<find-doc>
+<record>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00000ntm--22000004u-4500</fixfield>
+<fixfield id="008">040702q17441782xx------------00----fre--</fixfield>
+<varfield id="046" i1=" " i2=" ">
+<subfield label="a">q</subfield>
+<subfield label="c">1744</subfield>
+<subfield label="e">1782</subfield>
+</varfield>
+<varfield id="090" i1=" " i2=" ">
+<subfield label="a">32</subfield>
+<subfield label="b">LIDOS Bernoulli-Edition</subfield>
+</varfield>
+<varfield id="100" i1="1" i2=" ">
+<subfield label="a">Bernoulli, Daniel</subfield>
+<subfield label="d">1700-1782</subfield>
+<subfield label="1">(DE-588)118656503</subfield>
+<subfield label="e">Autor</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="1" i2="0">
+<subfield label="a">Ueber Thermometer</subfield>
+<subfield label="c">von [Daniel I Bernoulli]</subfield>
+</varfield>
+<varfield id="246" i1="3" i2=" ">
+<subfield label="i">Übergeordneter Titel aus Briefkatalog</subfield>
+<subfield label="a">Auszüge aus Briefen über physikalische Fragen</subfield>
+</varfield>
+<varfield id="246" i1="3" i2=" ">
+<subfield label="a">Briefe an [Johann III Bernoulli]</subfield>
+</varfield>
+<varfield id="264" i1=" " i2="0">
+<subfield label="a">[S.l.]</subfield>
+<subfield label="c">[zwischen 1744 und 1782]</subfield>
+</varfield>
+<varfield id="300" i1=" " i2=" ">
+<subfield label="a">1 Bl.</subfield>
+<subfield label="c">20,5 cm</subfield>
+</varfield>
+<varfield id="351" i1=" " i2=" ">
+<subfield label="c">Dokument=Item=Pièce</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Datenimport aus LIDOS / Bernoulli (2004-07-02)</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Eine Aufnahme für Bl.57-76 vorgefunden (Bern.-Ed.) (21.7.2015/A100/bot)</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="a">Im Katalog "Neuzeitliche Handschriften" existiert ein separater Eintrag; zusätzlich gibt es im Briefkatalog eine Gesamt-Karte für Bl.57-76 (21.7.2015/A100/bot)</subfield>
+</varfield>
+<varfield id="500" i1=" " i2=" ">
+<subfield label="a">Hier sind unter dem Titel "Extraits des lettres de M. Daniel Bernoulli à son neveu sur des matieres des physiques" [Vorblatt im Originalband] diverse undatierte Exzerpte aus Briefen von Dan. B. an Joh. III B. zusammengefasst</subfield>
+</varfield>
+<varfield id="506" i1=" " i2=" ">
+<subfield label="a">Es gelten die generellen Benutzungsregeln für den Sonderlesesaal. Dieser Band ist stark beschädigt und für die Benutzung bis auf weiteres gesperrt.</subfield>
+</varfield>
+<varfield id="533" i1=" " i2=" ">
+<subfield label="n">Auszug, siehe auch Signatur L Ia 752:Bl.403 (Hinweis auf übergeordneter Karte)</subfield>
+</varfield>
+<varfield id="541" i1=" " i2=" ">
+<subfield label="f">Öffentliche Bibliothek der Universität Basel</subfield>
+</varfield>
+<varfield id="546" i1=" " i2=" ">
+<subfield label="a">Französisch</subfield>
+</varfield>
+<varfield id="583" i1="1" i2=" ">
+<subfield label="b">Verzeichnung=Description=Inventaire</subfield>
+<subfield label="c">Juli 2015</subfield>
+<subfield label="f">HAN-Katalogisierungsregeln</subfield>
+<subfield label="i">Vollständige Rekatalogisierung nach Standortverzeichnis, Briefkatalog und Originalbrief</subfield>
+</varfield>
+<varfield id="583" i1="0" i2=" ">
+<subfield label="b">Konservierung=Preservation=Conservation</subfield>
+<subfield label="c">09.2011</subfield>
+<subfield label="i">Der Band ist mit EGT4 klassifiziert und für jegliche Benutzung gesperrt. Tintenfrass und Materialverlust.</subfield>
+</varfield>
+<varfield id="542" i1="1" i2="1">
+<subfield label="l">Die Katalogdaten stehen unter der Lizenz CC0 zur Weiternutzung zur Verfügung.</subfield>
+</varfield>
+<varfield id="773" i1="1" i2="A">
+<subfield label="g">Bl.67</subfield>
+<subfield label="j">67</subfield>
+<subfield label="t">Briefe von und an verschiedene Bernoullis</subfield>
+<subfield label="w">000207025</subfield>
+</varfield>
+<varfield id="903" i1=" " i2=" ">
+<subfield label="a">Bernoulli, Johann III (1744-1807)</subfield>
+</varfield>
+<varfield id="906" i1=" " i2=" ">
+<subfield label="a">Briefe = Correspondance</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">bernoulli</subfield>
+</varfield>
+<varfield id="909" i1=" " i2=" ">
+<subfield label="f">collect_this sammlung</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BOT2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150721</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1407</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">B-BOT2</subfield>
+<subfield label="b">40</subfield>
+<subfield label="c">20150721</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1410</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20151231</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1529</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20160101</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0350</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20160327</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">0028</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20160603</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1702</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20170324</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1746</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="c">20171109</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1138</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171202</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1715</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">p-load-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20171213</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1103</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20180330</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">1028</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">manage-18</subfield>
+<subfield label="b"/>
+<subfield label="c">20180717</subfield>
+<subfield label="l">DSV05</subfield>
+<subfield label="h">2030</subfield>
+</varfield>
+<varfield id="830" i1=" " i2=" ">
+<subfield label="a">Bernoulli, Daniel I (1700-1782)</subfield>
+</varfield>
+<varfield id="852" i1=" " i2=" ">
+<subfield label="n">CH</subfield>
+<subfield label="a">Basel UB</subfield>
+<subfield label="b">Handschriften</subfield>
+<subfield label="p">L Ia 676:Bl.67</subfield>
+<subfield label="q">Benutzung eingeschränkt</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>KQAMBRLGRV5YN21EVJ8GY7669XQM1UQBP6GJ13T9EUEDXV9E7F</session-id>
+</find-doc>

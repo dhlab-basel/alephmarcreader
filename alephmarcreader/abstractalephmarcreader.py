@@ -109,6 +109,67 @@ class AbstractAlephMarcReader(ABC):
             else:
                 return self.reference
 
+    class StandardizedDate:
+
+        TIMESPAN_SEPARATOR_KNORA = u':'
+        CALENDAR_PREFIX_KNORA = u'GREGORIAN' + TIMESPAN_SEPARATOR_KNORA
+        TIMESPAN_SEPARATOR_ISO8601 = u'--'
+
+        """
+        Represents a standardized date.
+        
+        Can return a string representation following the KNORA date format as well as a representation following
+        ISO 8601. Can hold both single dates and time intervals, both can be more or less precise.
+        (Gregorian Calendar is always implied.)
+        
+        KNORA date format:
+        `year[-month[-day]][:endYear[-endMonth[-endDay]]` (e.g. `1705-09-21` or `1705-09-23:1705-09-29`)
+        
+        The following ISO 8601 format is used:
+        `year[-month[-day]][--endYear[-endMonth[-endDay]]` (e.g. `1705-09-21` or `1705-09-23--1705-09-29`)
+        Intervals are always given with start and end date, not with duration.
+        As separator of intervals, double hyphen is used instead of solidus (dash), to allow for use in file names etc.
+        Dates are referred to by month, not by week.
+        No exact time (below "day").
+        Extended, not basic format is used for readability (e.g. `1705-09-21` not `17050921`)
+        (See: https://en.wikipedia.org/wiki/ISO_8601)
+        
+        :param str start_span: If the date is precise, this represents the date;
+        if the date is a time span, this represents the start of the time span.
+        :param str|False end_span: if the date is precise, this must be False;
+        else, this represents the end of the time span.
+        """
+        def __init__(self, start_span, end_span):
+            self.start_span = start_span
+            self.end_span = end_span
+            self.__replace_separators()
+
+        def get_standardized_date_string_KNORA(self):
+            """
+            Returns a string representation of the standardized date, following the KNORA internal standard.
+            :return str:
+            """
+            res = self.CALENDAR_PREFIX_KNORA + self.start_span
+            if self.end_span:
+                res = res + self.TIMESPAN_SEPARATOR_KNORA + self.end_span
+            return res
+
+        def get_standardized_date_string_ISO8601(self):
+            """
+            Returns a string representation of the standardized date, following ISO 8601.
+            :return str:
+            """
+            res = self.start_span
+            if self.end_span:
+                res = res + self.TIMESPAN_SEPARATOR_ISO8601 + self.end_span
+            return res
+
+        def __replace_separators(self):
+            self.start_span = self.start_span.replace('.', '-')
+            if self.end_span:
+                self.end_span = self.end_span.replace('.', '-')
+
+
     def __init__(self, gnd_index, file_path):
         """
         :param gnd_index: index of the GND subfield.
@@ -235,6 +296,23 @@ class AbstractAlephMarcReader(ABC):
 
         return mentioned
     get_mentioned_person.__annotations__ = {'return': [Person]}
+
+    def get_standardized_date(self):
+        """
+        Returns the standardized date.
+        :return: [StandardizedDate]
+        """
+        std_date = []
+        for field in self.__get_field('046'):
+            date_start = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'), '046', 'c')
+            date_end = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'e'), '046', 'e')
+
+            if date_start:
+                date = self.StandardizedDate(date_start, date_end)
+                std_date.append(date)
+
+        return std_date
+    get_standardized_date.__annotations__ = {'return': [StandardizedDate]}
 
     def get_date(self):
         """
