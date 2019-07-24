@@ -200,6 +200,14 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(orig_date[0].date, u'ce 5.r Mars 1724')
         self.assertEqual(orig_date[0].place, u'Berne,')
 
+        marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000307927.marc')
+
+        orig_date = marc21_rd.get_original_date_and_place()
+
+        self.assertEqual(len(orig_date), 1)
+        self.assertEqual(orig_date[0].date, u'ce 26. Mars 1763')
+        self.assertEqual(orig_date[0].place, False)
+
     def test_get_references_to_related_entries(self):
         # Test Field 533
         marc21_rd = AlephMarc21Reader('alephmarcreader/tests/sample_data/Marc21/000059794.marc')

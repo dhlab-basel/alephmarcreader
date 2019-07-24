@@ -199,6 +199,14 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(orig_date[0].date, u'ce 5.r Mars 1724')
         self.assertEqual(orig_date[0].place, u'Berne')
 
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000307927.xml')
+
+        orig_date = marcx_rd.get_original_date_and_place()
+
+        self.assertEqual(len(orig_date), 1)
+        self.assertEqual(orig_date[0].date, u'ce 26. Mars 1763')
+        self.assertEqual(orig_date[0].place, False)
+
     def test_get_references_to_related_entries(self):
         # Test Field 533
         marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059794.xml')

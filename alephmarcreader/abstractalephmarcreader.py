@@ -441,7 +441,7 @@ class AbstractAlephMarcReader(ABC):
     def get_original_date_and_place(self):
         """
         Returns a transcription of the date and place, as given on the letter.
-        (If it starts with square bracket, it's conjectured.)
+        Conjectured information (starting with '[') is ignored.
         :return: [OriginalDate]
         """
         original_dates = []
@@ -449,7 +449,14 @@ class AbstractAlephMarcReader(ABC):
         for field in self.__get_field('264'):
             date = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'c'), '264', 'c')
             place = self._handle_subfields_cardinality_max_one(self.__get_subfield_texts(field, 'a'), '264', 'a')
-            # TODO Ignore Fields starting wit '['?
+
+            if date and date.startswith('['):
+                date = False
+            if place and place.startswith('['):
+                place = False
+
+            if not (date or place):
+                continue
 
             orig_date = self.OriginalDate(date, place)
             original_dates.append(orig_date)
