@@ -7,38 +7,66 @@ ABC = abc.ABCMeta('ABC', (object,), {'__slots__': ()})
 
 class AbstractAlephMarcReader(ABC):
 
-    class Person:
+    class Correspondent(ABC):
+        """
+        Represents an abstract correspondent.
+        Both Persons and Organisations can be Correspondents.
+        :param str|False name: the name of the correspondent, if any.
+        :param str|False gnd: the GND of the correspondent, otherwise 'no_GND', if any.
+        :param str|False roles: the role of the correspondent (author etc.), if any.
+
+        """
+
+        CORRESPONDENT_TYPE_PERSON = 'Person'
+        CORRESPONDENT_TYPE_ORGANISATION = 'Organisation'
+
+        def __init__(self, name, gnd, roles):
+            self.name = name
+            self.gnd = gnd
+            self.roles = roles
+
+        @abc.abstractmethod
+        def get_type(self):
+            """
+            Gives the type of Correspondent.
+            :return str: Type of correspondent, either 'person' or 'organisation'.
+            """
+            pass
+
+    class Person(Correspondent):
         """
         Represents a person.
         :param str|False name: the name of the person (family name, first name), if any.
         :param str|False lifespan: the lifespan of the person (year of birth and death separated by a '-'), if any.
         :param str|False gnd: the GND of the person, otherwise 'no_GND', if any.
-        :param str|False role: the role of the person (author etc.), if any.
+        :param str|False roles: the role of the person (author etc.), if any.
 
         """
 
         def __init__(self, name, lifespan, gnd, roles):
-            self.name = name
+            super(AbstractAlephMarcReader.Person, self).__init__(name, gnd, roles)
             self.lifespan = lifespan
-            self.gnd = gnd
-            self.roles = roles
 
-    class Organisation:
+        def get_type(self):
+            return AbstractAlephMarcReader.Correspondent.CORRESPONDENT_TYPE_PERSON
+
+    class Organisation(Correspondent):
         """
         Represents a person.
         :param str|False name: the name of the person (family name, first name), if any.
         :param str|False gnd: the GND of the person, otherwise 'no_GND', if any.
-        :param str|False role: the role of the person (author etc.), if any.
+        :param str|False roles: the role of the person (author etc.), if any.
         :param str|False place the place of the organisation.
         :param str|False division of the organisation.
         """
 
         def __init__(self, name, gnd, roles, place, division):
-            self.name = name
-            self.gnd = gnd
-            self.roles = roles
+            super(AbstractAlephMarcReader.Organisation, self).__init__(name, gnd, roles)
             self.place = place
             self.division = division
+
+        def get_type(self):
+            return AbstractAlephMarcReader.Correspondent.CORRESPONDENT_TYPE_ORGANISATION
 
     class Place:
         """
@@ -254,7 +282,7 @@ class AbstractAlephMarcReader(ABC):
     def get_author(self):
         """
         Returns information about the author.
-        :return: [Person]
+        :return: [Correspondent]
         """
         author = []
         for field in self.__get_field('100'):
@@ -267,13 +295,20 @@ class AbstractAlephMarcReader(ABC):
             if "aut" in person.roles:
                 author.append(person)
 
+        # check for recipient organisations (710) that are actually authors
+        for field in self.__get_field('710'):
+            organisation = self._get_organisation_info(field, '710')
+
+            if "aut" in organisation.roles:
+                author.append(organisation)
+
         return author
-    get_author.__annotations__ = {'return': [Person]}
+    get_author.__annotations__ = {'return': [Correspondent]}
 
     def get_recipient(self):
         """
         Returns information about the recipient.
-        :return: [Person]
+        :return: [Correspondent]
         """
         recipient = []
         for field in self.__get_field('700'):
@@ -282,8 +317,14 @@ class AbstractAlephMarcReader(ABC):
             if "rcp" in person.roles:
                 recipient.append(person)
 
+        for field in self.__get_field('710'):
+            organisation = self._get_organisation_info(field, '710')
+
+            if "rcp" in organisation.roles:
+                recipient.append(organisation)
+
         return recipient
-    get_recipient.__annotations__ = {'return': [Person]}
+    get_recipient.__annotations__ = {'return': [Correspondent]}
 
     def get_mentioned_person(self):
         """
@@ -465,22 +506,6 @@ class AbstractAlephMarcReader(ABC):
         return mentioned_organisation
 
     get_mentioned_organisation.__annotations__ = {'return': [Organisation]}
-
-    def get_recipient_organisation(self):
-        """
-        Returns the receiving organisation.
-        :return: [Organisation]
-        """
-        recipient_organisation = []
-        for field in self.__get_field('710'):
-            org = self._get_organisation_info(field, '710')
-
-            if "rcp" in org.roles:
-                recipient_organisation.append(org)
-
-        return recipient_organisation
-
-    get_recipient_organisation.__annotations__ = {'return': [Organisation]}
 
     def get_supplement_remarks(self):
         """

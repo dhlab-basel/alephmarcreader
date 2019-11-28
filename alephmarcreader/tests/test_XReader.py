@@ -10,6 +10,9 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(len(author), 1)
 
+        self.assertEqual(type(author[0]).__name__, u'Person')
+        self.assertEqual(author[0].get_type(), u'Person')
+
         self.assertEqual(author[0].name, u'Bernoulli, Daniel')
         self.assertEqual(author[0].lifespan, u'1700-1782')
         self.assertEqual(author[0].gnd, u'(DE-588)118656503')
@@ -22,10 +25,34 @@ class TestMethods(unittest.TestCase):
 
         self.assertEqual(len(recipient), 1)
 
+        self.assertEqual(type(recipient[0]).__name__, u'Person')
+        self.assertEqual(recipient[0].get_type(), u'Person')
+
         self.assertEqual(recipient[0].name, u'Scheuchzer, Johann')
         self.assertEqual(recipient[0].lifespan, u'1684-1738')
         self.assertEqual(recipient[0].gnd, u'(DE-588)120379260')
         self.assertEqual(recipient[0].roles, [u'rcp'])
+
+        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000056870.xml')
+
+        recipient = marcx_rd.get_recipient()
+
+        self.assertEqual(len(recipient), 2)
+
+        self.assertEqual(type(recipient[0]).__name__, u'Organisation')
+        self.assertEqual(recipient[0].get_type(), u'Organisation')
+        self.assertEqual(type(recipient[1]).__name__, u'Organisation')
+        self.assertEqual(recipient[1].get_type(), u'Organisation')
+
+        self.assertEqual(recipient[0].name, u'Universit\xe4t Basel')
+        self.assertEqual(recipient[0].gnd, u'(DE-588)1085854191')
+        self.assertEqual(recipient[0].roles, [u'rcp'])
+        self.assertEqual(recipient[0].division, u'Regenz')
+
+        self.assertEqual(recipient[1].name, u'Universit\xe4t Basel')
+        self.assertEqual(recipient[1].gnd, u'(DE-588)1087006392')
+        self.assertEqual(recipient[1].roles, [u'rcp'])
+        self.assertEqual(recipient[1].division, u'Rektorat')
 
     def test_mentioned_person(self):
         marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000055275.xml')
@@ -33,6 +60,9 @@ class TestMethods(unittest.TestCase):
         mentioned = marcx_rd.get_mentioned_person()
 
         self.assertEqual(len(mentioned), 6)
+
+        self.assertEqual(type(mentioned[0]).__name__, u'Person')
+        self.assertEqual(mentioned[0].get_type(), u'Person')
 
         self.assertEqual(mentioned[0].name, u'Bernoulli, Johann')
         self.assertEqual(mentioned[0].lifespan, u'1667-1748')
@@ -177,23 +207,6 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(mentioned_organisation[1].name, u'Lefort Beaumont')
         self.assertEqual(mentioned_organisation[1].gnd, u'(DE-588)1086218213')
         self.assertEqual(mentioned_organisation[1].place, u'Gen\xe8ve')
-
-    def test_get_recipient_organisation(self):
-        marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000056870.xml')
-
-        mentioned_organisation = marcx_rd.get_recipient_organisation()
-
-        self.assertEqual(len(mentioned_organisation), 2)
-
-        self.assertEqual(mentioned_organisation[0].name, u'Universit\xe4t Basel')
-        self.assertEqual(mentioned_organisation[0].gnd, u'(DE-588)1085854191')
-        self.assertEqual(mentioned_organisation[0].roles, [u'rcp'])
-        self.assertEqual(mentioned_organisation[0].division, u'Regenz')
-
-        self.assertEqual(mentioned_organisation[1].name, u'Universit\xe4t Basel')
-        self.assertEqual(mentioned_organisation[1].gnd, u'(DE-588)1087006392')
-        self.assertEqual(mentioned_organisation[1].roles, [u'rcp'])
-        self.assertEqual(mentioned_organisation[1].division, u'Rektorat')
 
     def test_get_supplement_remarks(self):
         marcx_rd = AlephXReader('alephmarcreader/tests/sample_data/AlephX/000059552.xml')
