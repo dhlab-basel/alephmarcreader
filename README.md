@@ -1,5 +1,5 @@
 # alephmarcreader
-## General 
+## General
 Python library to read Marc obtained from Aleph, the catalogue of the library of the University of Basel.
 
 This library supports Marc21, MARCXML, and AlephX.
@@ -22,3 +22,27 @@ From the project root, run `python -m unittest alephmarcreader.tests.test_[Marc[
 - `lxml`: install with pip
 
 The library works both with python2 and python3.
+
+## Usage
+Install the package with `pip install alephmarcreader`.
+
+Example usage:
+```python
+# import
+from alephmarcreader import AlephMarcXMLReader
+
+# Read data from local file
+marc = AlephMarcXMLReader('example_file.xml')
+
+# get some fields
+author = marc.get_author()[0]
+recipient = marc.get_recipient()[0]
+date = marc.get_date()[0]
+
+# print it
+print(author.name)
+print(recipient.name)
+print(date)
+```
+
+For an exhaustive list of the API, use `pydoc`, as described above.
